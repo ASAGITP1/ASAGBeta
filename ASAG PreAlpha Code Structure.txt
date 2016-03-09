@@ -1,0 +1,28 @@
+﻿ASAG – Pre-Alpha Code Structure
+
+Directories
+
+-	Scenes
+	-	MainMenuScene.qml		// Main Menu
+	-	LevelScene.qml			// The ingame gamescene, loads levels via LevelLoader
+	-	StoreScene.qml			// Store
+-	Modules
+	-	BaseModule.qml			// BaseModule for inhertance
+	-	ModuleHolder.qml		// For Player Module Slots
+	-	Chaingun.qml
+	- 	LaserCannon.qml
+	-	CommandModule.qml
+	- 	Engines.qml
+	-	ModuleList.qml			// List of all modules, with initialization and stuff
+- 	Player
+	- 	Player.qml				// Ship for ingame - has modules,... already loaded (->DataManager)
+- 	Enemies
+	- 	Enemy.qml				// Baseclass for enemies, like modules
+	-	EnemyNames.qml			// One class per enemy
+- 	DataManager
+	- 	DataManager.qml			// Provides access to all data, performs loads/saves in background (->IOManager)
+	- 	IOManager.qml			// Manages access to files, provides raw data to DataManager (maybe + parsen in between?)
+- 	Levels
+	- 	LevelLoader.qml			// Interface between LevelScene and Levels
+	-	Level.qml				// Baseclass for levels
+	-	LevelList.qml			// List of all levels
