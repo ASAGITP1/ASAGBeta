@@ -14,6 +14,7 @@ EntityBase{
     height: 75
     z: 20
     property int hp: 15 // 15
+    property bool killed: false
 
     property int shootingRange:         1000         // distance in pixel
     property double shootingAngle:      20       // angle on one side
@@ -78,6 +79,7 @@ EntityBase{
         var newEntityProperties = {
             x: enemy.x + enemy.width/2 - 5,
             y: enemy.y + enemy.height + 50,
+            z: 10,
             offset: offset,
             dmg: 1,
             shottype: "eshot1"
@@ -91,7 +93,7 @@ EntityBase{
 
 
     function startPhys() {
-        collider.linearVelocity = Qt.point(0, 80)
+        collider.linearVelocity = Qt.point(0, 120)
     }
 
     function getHit(other, type) {
@@ -99,7 +101,8 @@ EntityBase{
             var dmg = other.getBody().target.dmg;
             hp -= dmg;
             other.getBody().target.removeEntity();
-            if(hp <= 0) {
+            if(hp <= 0 && !killed) {
+                killed = true;
                 enemy.removeEntity();
                 level.kills ++;
                 level.checkVictory();

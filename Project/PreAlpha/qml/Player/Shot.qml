@@ -11,6 +11,7 @@ EntityBase {
     id: shotEntity
     entityType: "shot"
     poolingEnabled: false
+    z: 10
 
     property double offset: 0
     property int dmg

@@ -11,7 +11,7 @@ BaseLevel {
     levelName: "Level5"
     playerP: player
 
-    property int totalSpawns: 1
+    totalSpawns: 1
 
 
       Timer {

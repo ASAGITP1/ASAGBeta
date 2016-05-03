@@ -32,6 +32,14 @@ Item {
     }
 
 
+    Image {
+        id: background
+        anchors.fill: parent
+        source: "../../assets/UI/Background.png"
+        z: 0
+    }
+
+
 
     Timer {
         id: victoryTimer
@@ -44,7 +52,7 @@ Item {
 
     function checkVictory() {
         if(kills >= totalSpawns) {
-            console.debug("Victory! Kills: " + kills);
+            console.debug("Victory! Kills: " + kills + ", Total Spawns: " + totalSpawns);
             victoryTimer.start();
         }
     }

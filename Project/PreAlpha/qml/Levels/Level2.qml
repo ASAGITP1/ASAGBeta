@@ -12,7 +12,7 @@ BaseLevel {
     playerP: player
 
 
-    property int totalSpawns: 10
+    totalSpawns: 30
 
       Timer {
           id: timer

@@ -11,12 +11,12 @@ BaseLevel {
     levelName: "Level1"
     playerP: player
 
-    property int totalSpawns: 10
+    totalSpawns: 30
 
 
       Timer {
           id: timer
-          interval: 1000; running: active; repeat: true
+          interval: 400; running: active; repeat: true
           onTriggered: spawnEnemy()
          }
 
@@ -50,10 +50,9 @@ BaseLevel {
               currentSpawns++;
           } else {
                 timer.running = false;
-                state = STATE_NOSPAWNING
+                state = state_NOSPAWNING
           }
       }
-
 
 }
 

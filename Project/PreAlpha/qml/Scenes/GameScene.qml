@@ -119,13 +119,6 @@ Scene {
      }
 
 
-    Image {
-        anchors.fill: parent
-        source: "../../assets/UI/Background.png"
-        z: 0
-        id: background
-    }
-
 
 
 
