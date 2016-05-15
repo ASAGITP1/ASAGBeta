@@ -7,6 +7,7 @@ import "../Enemy"
 import "../Modules"
 import "../Player"
 import "../Shipdesigns"
+import "../Editor"
 import "../vars.js" as Global
 
 
@@ -26,6 +27,7 @@ Scene {
 
     property int shipid : xread.readXML("ship")
 
+    Component.onCompleted: {console.debug("SWAGYOLOFUCKQ§IROVN")}
 
     EntityManager {
        id: entityManager
@@ -35,20 +37,58 @@ Scene {
 
      }
 
+    Image {
+        anchors.fill: parent
+        source: "../../assets/UI/Background.png"
+        z: 0
+        id: background
+    }
 
     Rectangle{
 
-
-
-
+        id:toprec
         //upper part of the window
-        width: editorscene.width
+        width: editorscene.width + Global.module.count * 50
         height:editorscene.height/6
         color:"red"
 
+
         x: 0
         y: 0
+
+        MouseArea{
+                anchors.fill: parent
+                drag.target: toprec
+                drag.axis: Drag.XAxis
+                drag.minimumX: -Global.module.count * 100
+                drag.maximumX: 0
+        }
+
+
     }
+
+    /* Manually inserted Modules
+    EditorModule{
+
+        id:cannon1
+        x_spot:toprec.x+50
+        picsource: Global.module1
+        gunid:1
+    }
+
+    EditorModule{
+
+        id:cannon2
+        x_spot: toprec.x+250
+        picsource: Global.module2
+        gunid:2
+    }
+    */
+
+
+
+
+
 
     Image{
         //used as a background for the modules
@@ -57,61 +97,27 @@ Scene {
         source:"../../assets/Player/ship1.png"
         x:-30
         y:200
+
+
     }
 
-    Rectangle{
-        //first cannon
-        id:cannon1
-        width:100
-        height:100
-        x: 50
-        y: 50
-        color:Qt.rgba(0,0,0,0.3)
-        border.color:"grey"
-        border.width: 4
-            Image{
-                width:100
-                height:100
-                source:"../../assets/Player/cannon1.png"
 
-                MouseArea{
-                    anchors.fill:parent
-                    onClicked:{
-                        Global.activeid=1
-                        cannon1.border.color="yellow"
-                        cannon2.border.color="grey"
-                        deletemodule.border.color="grey"
-                    }
-                }
-            }
-    }
+
 
     Rectangle{
-        //second cannon
-        id:cannon2
-        width:100
-        height:100
-        x: 250
-        y: 50
-        color:Qt.rgba(0,0,0,0.3)
-        border.color:"grey"
-        border.width: 4
-            Image{
+        //right part of top so the delete button is always on the screen
 
-                width:100
-                height:100
-                source:"../../assets/Player/cannon2.png"
 
-                MouseArea{
-                    anchors.fill:parent
-                    onClicked:{
-                        Global.activeid=2
-                        cannon2.border.color="yellow"
-                        cannon1.border.color="grey"
-                        deletemodule.border.color="grey"
-                    }
-                }
-            }
+        id:deleterec
+        //upper part of the window
+        width:300
+        height:editorscene.height/6
+        color:"red"
+
+
+        x: 440
+        y: 0
+
     }
 
     Rectangle{
@@ -216,7 +222,7 @@ Scene {
         Global.id05=xread.readXML("slot",5)
         Global.id06=xread.readXML("slot",6)
         Global.id07=xread.readXML("slot",7)
-        Global.id08=xread.readXML("slot",8)
+        /*Global.id08=xread.readXML("slot",8)
         Global.id09=xread.readXML("slot",9)
         Global.id10=xread.readXML("slot",10)
         Global.id11=xread.readXML("slot",11)
@@ -228,7 +234,7 @@ Scene {
         Global.id17=xread.readXML("slot",17)
         Global.id18=xread.readXML("slot",18)
         Global.id19=xread.readXML("slot",19)
-        Global.id20=xread.readXML("slot",20)
+        Global.id20=xread.readXML("slot",20)*/
 
         slot1.slotid=Global.id01
         slot2.slotid=Global.id02
@@ -258,5 +264,38 @@ Scene {
     Xwrite{
         id:xwrite
     }
+
+    //dynamic insertion of modules
+ function createswag(){
+     for(var i=0;i<Global.module.count;i++){
+         var component = Qt.createComponent("EditorModule.qml");
+         var j = i+1;
+         var k = i*200+50;
+         var cannon="cannon"+j;
+         var gunid=j;
+         var x_spot=toprec.x+k;
+
+
+         switch(j){
+         case 1:
+             var picsauce=Global.module.p1;
+             break;
+         case 2:
+             var picsauce=Global.module.p2;
+             break;
+         default:
+             break;
+         }
+
+
+
+         var sprite = component.createObject(toprec, {"id": cannon, "x_spot":x_spot, "picsource": picsauce, "gunid":gunid});
+         console.debug(cannon,gunid,x_spot, picsauce);
+         if (sprite == null) {
+                 // Error Handling
+                 console.log("Error creating object");
+             }
+     }
+ }
 
 }

@@ -21,3 +21,13 @@ var id19=0;
 var id20=0;
 var globalshipid=0;
 var activeid=0;
+
+
+
+var module = {
+
+  p1  :"../../assets/Player/cannon1.png",
+  p2 : "../../assets/Player/cannon2.png",
+  count : 2
+
+};

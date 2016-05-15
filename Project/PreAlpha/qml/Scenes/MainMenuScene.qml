@@ -111,6 +111,7 @@ Scene {
                            xwrite.writeXML(1)
                        }
                         editorscene.initialize();
+                        editorscene.createswag();
                         scenemaster.switchScene(4);
 
                    }
