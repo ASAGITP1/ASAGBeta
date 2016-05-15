@@ -38,3 +38,6 @@ HEADERS += \
     xread.h \
     xwrite.h
 
+#DISTFILES += \
+#    qml/Enemy/Enemy1.qml
+

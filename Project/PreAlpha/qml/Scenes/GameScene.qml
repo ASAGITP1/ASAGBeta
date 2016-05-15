@@ -45,7 +45,7 @@ Scene {
        width: gamescene.width
        height: gamescene.height
        z: 10
-       source: activeLevelFileName !== "" ? "../Levels/" + activeLevelFileName : ""
+       source: activeLevelFileName !== "" ? "../Levels/Sector1/" + activeLevelFileName : ""
        onLoaded: {
             activeLevel = loader.children[0];
             activeLevelE = loader.children[0];
@@ -114,7 +114,9 @@ Scene {
 
        dynamicCreationEntityList: [
                 Qt.resolvedUrl("../Player/Shot.qml"),
-                Qt.resolvedUrl("../Enemy/Enemy.qml")
+                Qt.resolvedUrl("../Enemy/Sector1/Enemy1.qml"),
+                Qt.resolvedUrl("../Enemy/Sector1/Enemy2.qml"),
+                Qt.resolvedUrl("../Enemy/Sector1/Shot1.qml")
            ]
      }
 
