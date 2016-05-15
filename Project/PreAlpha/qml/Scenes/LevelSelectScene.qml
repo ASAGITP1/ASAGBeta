@@ -51,7 +51,7 @@ Scene {
     }
 
 
-
+    /*
     Text {
        anchors.horizontalCenter: parent.horizontalCenter
        y: 30
@@ -59,6 +59,7 @@ Scene {
        color: "#444444"
        text: "Level Select Scene"
      }
+     */
 
 
 
