@@ -1,6 +1,7 @@
 import VPlay 2.0
 import QtQuick 2.0
 
+
 import "../../Enemy"
 import "../../Modules"
 import "../../Player"
@@ -13,7 +14,8 @@ EntityBase{
     width: 150
     height: 150
     z: 20
-    property int hp: 100
+
+    property int hp: 200
 
     property int shootingRange:         800         // distance in pixel
     property double shootingAngle:      40       // angle on one side

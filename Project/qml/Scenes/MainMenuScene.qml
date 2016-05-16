@@ -4,12 +4,14 @@ import xread 1.0
 import xwrite 1.0
 
 
+import "../vars.js" as Global
+
 Scene {
     id: mainmenuscene
     property GameWindow scenemaster
 
-    width: 640
-    height: 960
+    width: 1080
+    height: 1920
 
     // by default, set the opacity to 0 - this will be changed from the main.qml with PropertyChanges
     opacity: 0
@@ -40,20 +42,52 @@ Scene {
 
 
 
-    Text {
+    /*Text {
        anchors.horizontalCenter: parent.horizontalCenter
        y: 30
        font.pixelSize: 30
        color: "#444444"
        text: "Main Menu Scene"
-     }
+     }*/
+
+    Image {
+        x: parent.width-100
+        y: 50
+        z: 50
+        scale: 1
+        source: "../../assets/UI/new/sound_icon.png"
+        height:75
+        width:75
+        id: mutebutton
+
+
+
+        MouseArea {
+               anchors.fill: parent
+               onClicked: {
+                   if(Global.mute==0)
+                   {
+                       mutebutton.source="../../assets/UI/new/mute_icon.png";
+                       Global.mute=1;
+                   }
+                   else{
+                       mutebutton.source="../../assets/UI/new/sound_icon.png";
+                       Global.mute=0;
+                   }
+
+                 }
+           }
+    }
+
 
     Image {
         anchors.horizontalCenter: parent.horizontalCenter
-        y: parent.height - 450
+        y: 100
         z: 50
-        scale: 0.7
-        source: "../../assets/UI/Campaign.png"
+        scale: 1
+        source: "../../assets/UI/new/play_planet.png"
+        height:400
+        width:400
         id: campaign
 
 
@@ -66,6 +100,7 @@ Scene {
            }
     }
 
+    /* NOT IMPLEMENTED YET
     Image {
         anchors.horizontalCenter: parent.horizontalCenter
         y: parent.height - 600
@@ -82,25 +117,23 @@ Scene {
                  }
            }
     }
+    */
 
 
 
 
     Image {
-        anchors.horizontalCenter: parent.horizontalCenter
+        //anchors.horizontalCenter: parent.horizontalCenter
         y: parent.height - 300
+        x: parent.width/1.7
         z: 50
-        scale: 0.7
-        source: "../../assets/UI/ShipShop.png"
+        scale: 1
+        source: "../../assets/UI/new/editor_planet.png"
+        height:200
+        width:200
         id: editor
 
-        Rectangle {
-            x: 20
-            y: 50
-            width: 250
-            height: 150
-            color: "#CCCCCC"
-            opacity: 0
+
 
             MouseArea {
                    anchors.fill: parent
@@ -111,16 +144,25 @@ Scene {
                            xwrite.writeXML(1)
                        }
                         editorscene.initialize();
-                        scenemaster.switchScene(4);
+                        editorscene.createswag();
+                        scenemaster.switchScene(9);
 
                    }
                }
 
-
-        }
-
     }
 
+    Image {
+        //anchors.horizontalCenter: parent.horizontalCenter
+        y: parent.height - 300
+        x: parent.width/8
+        z: 50
+        scale: 1
+        source: "../../assets/UI/new/shop_planet.png"
+        height:200
+        width:200
+        id: shop
+    }
 
 
     Xread{

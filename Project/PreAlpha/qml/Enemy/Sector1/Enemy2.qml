@@ -7,16 +7,18 @@ import "../../Modules"
 import "../../Player"
 import "../../Scenes"
 import "../../Levels"
+
 EntityBase{
     id:enemy
     entityType: "enemy"
     width: 75
     height: 75
     z: 20
-    property int hp: 5
+    property int hp: 75
+    property bool killed: false
 
     property int shootingRange:         1000         // distance in pixel
-    property double shootingAngle:      20       // angle on one side
+    property double shootingAngle:      20          // angle on one side
 
     property Player player;
     property int playerX: player.x + player.width/2;
@@ -27,7 +29,7 @@ EntityBase{
 
     Image {
         id:image
-        source: "../../assets/Sectors/Sector1/Enemies/Enemy2.png"
+        source: "../../../assets/Sectors/Sector1/Enemies/Enemy2.png"
          anchors.fill: parent
     }
 
@@ -91,7 +93,7 @@ EntityBase{
 
 
     function startPhys() {
-        collider.linearVelocity = Qt.point(0, 120)
+        collider.linearVelocity = Qt.point(0, 80)
     }
 
     function getHit(other, type) {

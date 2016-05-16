@@ -14,7 +14,7 @@ BaseLevel {
     levelName: "Level4"
     playerP: player
 
-    totalSpawns: 20
+    totalSpawns: 40
 
 
       Timer {
@@ -51,10 +51,10 @@ BaseLevel {
                   level: level4
               }
 
-              if(Math.random() > 0.5) {
-                entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("../Enemy/Sector1/Enemy.qml"), newEntityProperties  );
+              if(Math.random() > 0.4) {
+                entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("../../Enemy/Sector1/Enemy1.qml"), newEntityProperties  );
               } else {
-                  entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("../Enemy/Sector1/Enemy2.qml"), newEntityProperties  );
+                  entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("../../Enemy/Sector1/Enemy2.qml"), newEntityProperties  );
               }
 
               currentSpawns++;
