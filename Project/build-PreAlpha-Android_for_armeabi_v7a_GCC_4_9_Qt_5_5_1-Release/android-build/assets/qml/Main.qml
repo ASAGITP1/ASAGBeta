@@ -9,7 +9,7 @@ GameWindow {
 
     //licenseKey: "<generate one from http://v-play.net/licenseKey>"
 
-    activeScene: mainmenuscene
+    activeScene: sectorselectscene
 
     property GameScene gameScene: gamescene
 
@@ -114,13 +114,25 @@ GameWindow {
         case 1:             // Main Menu
             state = "menu"
             break;
-        case 2:             // Game Scene
-            state = "levelselectscene"
+        case 2:             // Sector Selector
+            state = "sectorselectscene"
             break;
-        case 3:             // Ship Editor
+        case 3:             // Level Selector Sector 1
+            state = "levelselectscene1"
+            break;
+        case 4:             // Level Selector Sector 2
+            state = "levelselectscene2"
+            break;
+        case 5:             // Level Selector Sector 3
+            state = "levelselectscene3"
+            break;
+        case 6:             // Level Selector Sector 4
+            state = "levelselectscene4"
+            break;
+        case 8:             // Game Scene
             state = "gamescene"
             break;
-        case 4:             // Game Scene
+        case 9:             // Ship Editor
             state = "editor"
             break;
         }

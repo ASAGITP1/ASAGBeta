@@ -8,8 +8,9 @@ Scene {
     id: levelselectscene
     property GameWindow scenemaster
 
-    width: 640
-    height: 960
+
+    width: 1080
+    height: 1920
 
     property string chosenLevel: "Level1.qml"
     property int activeLevel: 1
@@ -298,7 +299,7 @@ Scene {
                anchors.fill: parent
                onClicked: {
                    levelPressed(chosenLevel)
-                   scenemaster.switchScene(3);
+                   scenemaster.switchScene(8);
                  }
            }
     }

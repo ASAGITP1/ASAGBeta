@@ -18,7 +18,7 @@ EntityBase{
     property bool killed: false
 
     property int shootingRange:         1000         // distance in pixel
-    property double shootingAngle:      20          // angle on one side
+    property double shootingAngle:      40          // angle on one side
 
     property Player player;
     property int playerX: player.x + player.width/2;

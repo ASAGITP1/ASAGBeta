@@ -17,7 +17,7 @@ EntityBase{
 
     property int hp: 200
 
-    property int shootingRange:         800         // distance in pixel
+    property int shootingRange:         1700         // distance in pixel
     property double shootingAngle:      40       // angle on one side
 
     property Player player;
@@ -85,6 +85,7 @@ EntityBase{
             y: enemyY + 50,
             offset: offset,
             dmg: 1,
+            inaccmod: .20,              // in %
             shottype: "eshot1"
         }
 

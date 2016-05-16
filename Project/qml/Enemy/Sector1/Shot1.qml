@@ -14,9 +14,12 @@ EntityBase {
     entityType: "enemyshot"
     poolingEnabled: false
 
+    z:99
+
     property double offset: 0
     property int dmg
     property string shottype
+    property int inaccmod: 1
 
         Image {
             id:image
@@ -51,7 +54,7 @@ EntityBase {
         function startPhys() {
 
             var speed = Math.floor( Math.random() * 300) + 1500
-            var inacc = Math.floor((Math.random() - 0.5) * 500)
+            var inacc = Math.floor((Math.random() - 0.5) * 500) * inaccmod
             var targeting = Math.floor(speed * offset) + inacc
             collider.linearVelocity = Qt.point(targeting, speed)
 

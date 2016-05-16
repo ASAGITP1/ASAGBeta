@@ -8,11 +8,8 @@ Scene {
     id: sectorselectscene
     property GameWindow scenemaster
 
-    width: 640
-    height: 960
-
-    property string chosenLevel: "Level1.qml"
-    property int activeLevel: 1
+    width: 1080
+    height: 1920
 
     // by default, set the opacity to 0 - this will be changed from the main.qml with PropertyChanges
     opacity: 0
@@ -25,13 +22,7 @@ Scene {
 
     signal levelPressed(string selectedLevel)
 
-
-    onLevelPressed: {
-            // selectedLevel is the parameter of the levelPressed signal
-            scenemaster.gameScene.setLevel("");
-            scenemaster.gameScene.setLevel(selectedLevel)
-        }
-
+    property int selectedSector: 1;
 
 
     Image {
@@ -99,7 +90,7 @@ Scene {
             z: 50
             width: 50
             height: 50
-            source: (activeLevel == 1) ? "../../assets/UI/level_done.png" : "../../assets/UI/new/button_planet.png"
+            source: (selectedSector == 1) ? "../../assets/UI/SectorSelector/Sector3.png" : "../../assets/UI/SectorSelector/Sector3.png"
             id: level1img
         }
 
@@ -110,23 +101,22 @@ Scene {
            z: 50
            font.pixelSize: 30
            color: "#DDDDDD"
-           text: "Level 1"
+           text: "Sector 1"
          }
 
 
         MouseArea {
                anchors.fill: parent
                onClicked: {
-                   activeLevel = 1
-                   chosenLevel = "Level1.qml"
+                   selectedSector = 1;
                  }
            }
     }
 
     // LEVEL 2
     Item {
-        x: 205
-        y: 385
+        x: 155
+        y: 730
         height: 60
         width: 200
 
@@ -137,7 +127,7 @@ Scene {
             z: 50
             width: 50
             height: 50
-            source: (activeLevel == 2) ? "../../assets/UI/level_done.png" : "../../assets/UI/new/button_planet.png"
+            source: (selectedSector == 1) ? "../../assets/UI/SectorSelector/Sector3.png" : "../../assets/UI/SectorSelector/Sector3.png"
             id: level2img
         }
 
@@ -148,25 +138,23 @@ Scene {
            z: 50
            font.pixelSize: 30
            color: "#DDDDDD"
-           text: "Level 2"
+           text: "Sector 2"
          }
 
 
         MouseArea {
                anchors.fill: parent
                onClicked: {
-                   activeLevel = 2
-                   chosenLevel = "Level2.qml"
+                   selectedSector = 2
                  }
            }
     }
 
 
-
     // LEVEL 3
     Item {
-        x: 345
-        y: 335
+        x: 155
+        y: 930
         height: 60
         width: 200
 
@@ -177,7 +165,7 @@ Scene {
             z: 50
             width: 50
             height: 50
-            source: (activeLevel == 3) ? "../../assets/UI/level_done.png" : "../../assets/UI/new/button_planet.png"
+            source: (selectedSector == 1) ? "../../assets/UI/SectorSelector/Sector3.png" : "../../assets/UI/SectorSelector/Sector3.png"
             id: level3img
         }
 
@@ -188,25 +176,23 @@ Scene {
            z: 50
            font.pixelSize: 30
            color: "#DDDDDD"
-           text: "Level 3"
+           text: "Sector 3"
          }
 
 
         MouseArea {
                anchors.fill: parent
                onClicked: {
-                   activeLevel = 3
-                   chosenLevel = "Level3.qml"
+                   selectedSector = 3;
                  }
            }
     }
 
 
-
     // LEVEL 4
     Item {
-        x: 383
-        y: 187
+        x: 155
+        y: 1130
         height: 60
         width: 200
 
@@ -217,7 +203,7 @@ Scene {
             z: 50
             width: 50
             height: 50
-            source: (activeLevel == 4) ? "../../assets/UI/level_done.png" : "../../assets/UI/new/button_planet.png"
+            source: (selectedSector == 1) ? "../../assets/UI/SectorSelector/Sector3.png" : "../../assets/UI/SectorSelector/Sector3.png"
             id: level4img
         }
 
@@ -228,53 +214,14 @@ Scene {
            z: 50
            font.pixelSize: 30
            color: "#DDDDDD"
-           text: "Level 4"
-         }
-
-
-        MouseArea {
-               anchors.fill: parent
-               onClicked: {                   
-                   activeLevel = 4
-                   chosenLevel = "Level4.qml"
-                 }
-           }
-    }
-
-
-    // LEVEL 5
-    Item {
-        x: 312
-        y: 80
-        height: 60
-        width: 200
-
-        Image {
-            x: 0
-            y: 0
-            z: 50
-            width: 50
-            height: 50
-            source: (activeLevel == 5) ? "../../assets/UI/level_bosssel.png" : "../../assets/UI/level_bossdone.png"
-            id: level5img
-        }
-
-        Text {
-           anchors.horizontalCenter: parent.horizontalCenter
-           x: 50
-           y: 10
-           z: 50
-           font.pixelSize: 30
-           color: "#DDDDDD"
-           text: "Level 5"
+           text: "Sector 4"
          }
 
 
         MouseArea {
                anchors.fill: parent
                onClicked: {
-                   activeLevel = 5
-                   chosenLevel = "Level5.qml"
+                   selectedSector = 4;
                  }
            }
     }
@@ -297,8 +244,7 @@ Scene {
         MouseArea {
                anchors.fill: parent
                onClicked: {
-                   levelPressed(chosenLevel)
-                   scenemaster.switchScene(3);
+                   scenemaster.switchScene(2 + selectedSector);
                  }
            }
     }

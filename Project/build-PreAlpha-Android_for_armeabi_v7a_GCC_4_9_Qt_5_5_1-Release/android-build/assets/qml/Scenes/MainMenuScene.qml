@@ -10,8 +10,8 @@ Scene {
     id: mainmenuscene
     property GameWindow scenemaster
 
-    width: 640
-    height: 960
+    width: 1080
+    height: 1920
 
     // by default, set the opacity to 0 - this will be changed from the main.qml with PropertyChanges
     opacity: 0
@@ -145,7 +145,7 @@ Scene {
                        }
                         editorscene.initialize();
                         editorscene.createswag();
-                        scenemaster.switchScene(4);
+                        scenemaster.switchScene(9);
 
                    }
                }

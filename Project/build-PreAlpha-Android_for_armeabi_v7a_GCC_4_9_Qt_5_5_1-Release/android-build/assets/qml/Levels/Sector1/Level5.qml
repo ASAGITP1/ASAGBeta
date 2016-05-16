@@ -26,7 +26,7 @@ BaseLevel {
 
       Component.onCompleted: {
           if(Global.mute==0){
-          backgroundMusic.source = "../../assets/Music/Rhinoceros.mp3";
+          backgroundMusic.source = "../../../assets/Music/Rhinoceros.mp3";
           backgroundMusic.play();
           }
       }
@@ -45,13 +45,13 @@ BaseLevel {
       function spawnEnemy() {
           if(currentSpawns < totalSpawns) {
               var newEntityProperties = {
-                  x: 300,
+                  x: 500,
                   y: 10,
                   player: playerP,
                   level: level5
               }
 
-                entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("../Enemy/Sector1/Boss1.qml"), newEntityProperties  );
+                entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("../../Enemy/Sector1/Boss1.qml"), newEntityProperties  );
 
               currentSpawns++;
           } else {

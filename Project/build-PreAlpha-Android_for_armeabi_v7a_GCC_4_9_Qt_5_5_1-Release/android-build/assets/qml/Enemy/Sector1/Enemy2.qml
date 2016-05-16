@@ -17,7 +17,7 @@ EntityBase{
     property int hp: 75
     property bool killed: false
 
-    property int shootingRange:         1000         // distance in pixel
+    property int shootingRange:         1800         // distance in pixel
     property double shootingAngle:      20          // angle on one side
 
     property Player player;
@@ -82,6 +82,7 @@ EntityBase{
             y: enemy.y + enemy.height + 50,
             offset: offset,
             dmg: 1,
+            inaccmod: .7,
             shottype: "eshot1"
         }
 
@@ -101,7 +102,8 @@ EntityBase{
             var dmg = other.getBody().target.dmg;
             hp -= dmg;
             other.getBody().target.removeEntity();
-            if(hp <= 0) {
+            if(hp <= 0 && !killed) {
+                killed = true;
                 enemy.removeEntity();
                 level.kills ++;
                 level.checkVictory();

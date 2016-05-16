@@ -9,8 +9,8 @@ import "../Scenes"
 BaseModule{
     id:chaingun
 
-    property int shootingRange:         650         // distance in pixel
-    property double shootingAngle:      20       // angle on one side
+    property int shootingRange:         1250         // distance in pixel
+    property double shootingAngle:      40       // angle on one side
 
     hp: 5
     maxhp: 5

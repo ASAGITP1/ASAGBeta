@@ -526,6 +526,7 @@ D:\Daten\Git\ASAGBeta\Project\build-PreAlpha-Android_for_armeabi_v7a_GCC_4_9_Qt_
 D:\Daten\Git\ASAGBeta\Project\build-PreAlpha-Android_for_armeabi_v7a_GCC_4_9_Qt_5_5_1-Release\android-build\assets\assets\UI\new \
 D:\Daten\Git\ASAGBeta\Project\build-PreAlpha-Android_for_armeabi_v7a_GCC_4_9_Qt_5_5_1-Release\android-build\assets\assets\UI\RealmOfTrials.png \
 D:\Daten\Git\ASAGBeta\Project\build-PreAlpha-Android_for_armeabi_v7a_GCC_4_9_Qt_5_5_1-Release\android-build\assets\assets\UI\sector1.png \
+D:\Daten\Git\ASAGBeta\Project\build-PreAlpha-Android_for_armeabi_v7a_GCC_4_9_Qt_5_5_1-Release\android-build\assets\assets\UI\SectorSelector \
 D:\Daten\Git\ASAGBeta\Project\build-PreAlpha-Android_for_armeabi_v7a_GCC_4_9_Qt_5_5_1-Release\android-build\assets\assets\UI\ShipShop.png \
 D:\Daten\Git\ASAGBeta\Project\build-PreAlpha-Android_for_armeabi_v7a_GCC_4_9_Qt_5_5_1-Release\android-build\assets\assets\UI\new\bsbackground.png \
 D:\Daten\Git\ASAGBeta\Project\build-PreAlpha-Android_for_armeabi_v7a_GCC_4_9_Qt_5_5_1-Release\android-build\assets\assets\UI\new\button_planet.png \
@@ -539,6 +540,7 @@ D:\Daten\Git\ASAGBeta\Project\build-PreAlpha-Android_for_armeabi_v7a_GCC_4_9_Qt_
 D:\Daten\Git\ASAGBeta\Project\build-PreAlpha-Android_for_armeabi_v7a_GCC_4_9_Qt_5_5_1-Release\android-build\assets\assets\UI\new\shop_icon.png \
 D:\Daten\Git\ASAGBeta\Project\build-PreAlpha-Android_for_armeabi_v7a_GCC_4_9_Qt_5_5_1-Release\android-build\assets\assets\UI\new\shop_planet.png \
 D:\Daten\Git\ASAGBeta\Project\build-PreAlpha-Android_for_armeabi_v7a_GCC_4_9_Qt_5_5_1-Release\android-build\assets\assets\UI\new\sound_icon.png \
+D:\Daten\Git\ASAGBeta\Project\build-PreAlpha-Android_for_armeabi_v7a_GCC_4_9_Qt_5_5_1-Release\android-build\assets\assets\UI\SectorSelector\Sector3.png \
 D:\Daten\Git\ASAGBeta\Project\build-PreAlpha-Android_for_armeabi_v7a_GCC_4_9_Qt_5_5_1-Release\android-build\assets\qml\config.json \
 D:\Daten\Git\ASAGBeta\Project\build-PreAlpha-Android_for_armeabi_v7a_GCC_4_9_Qt_5_5_1-Release\android-build\assets\qml\Editor \
 D:\Daten\Git\ASAGBeta\Project\build-PreAlpha-Android_for_armeabi_v7a_GCC_4_9_Qt_5_5_1-Release\android-build\assets\qml\Enemy \

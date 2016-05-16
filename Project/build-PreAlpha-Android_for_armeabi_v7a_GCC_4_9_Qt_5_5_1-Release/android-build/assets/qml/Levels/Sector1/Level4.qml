@@ -45,7 +45,7 @@ BaseLevel {
       function spawnEnemy() {
           if(currentSpawns < totalSpawns) {
               var newEntityProperties = {
-                  x: Math.random() * 500 + 50,
+                  x: Math.random() * (scene.width - 100) + 50,
                   y: 10,
                   player: playerP,
                   level: level4

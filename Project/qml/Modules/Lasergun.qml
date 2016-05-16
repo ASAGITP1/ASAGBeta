@@ -9,8 +9,8 @@ import "../Scenes"
 BaseModule{
     id:lasergun
 
-    property int shootingRange:         1500         // distance in pixel
-    property double shootingAngle:      50          // angle on one side
+    property int shootingRange:         1800         // distance in pixel
+    property double shootingAngle:      20          // angle on one side
 
     hp: 5
     maxhp: 5

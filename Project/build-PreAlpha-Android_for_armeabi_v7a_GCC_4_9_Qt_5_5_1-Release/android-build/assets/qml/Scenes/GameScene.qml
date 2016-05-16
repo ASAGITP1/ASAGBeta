@@ -13,8 +13,8 @@ Scene {
 
     property Player player
 
-    width: 640
-    height: 960
+    width: 1080
+    height: 1920
 
 
     // by default, set the opacity to 0 - this will be changed from the main.qml with PropertyChanges
@@ -141,6 +141,7 @@ Scene {
 
         x: gamescene.width - 50
         y: 50
+        z: 99
 
         MouseArea {
                anchors.fill: parent
