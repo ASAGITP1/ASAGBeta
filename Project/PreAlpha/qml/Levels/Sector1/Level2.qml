@@ -7,6 +7,7 @@ import "../../Modules"
 import "../../Player"
 import "../../Scenes"
 import "../"
+import "../../vars.js" as Global
 
 BaseLevel {
     id: level2
@@ -24,8 +25,10 @@ BaseLevel {
 
 
       Component.onCompleted: {
+          if(Global.mute==0){
           backgroundMusic.source = "../../assets/Music/Undaunted.mp3";
           backgroundMusic.play();
+          }
       }
 
 

@@ -4,6 +4,8 @@ import xread 1.0
 import xwrite 1.0
 
 
+import "../vars.js" as Global
+
 Scene {
     id: mainmenuscene
     property GameWindow scenemaster
@@ -47,6 +49,36 @@ Scene {
        color: "#444444"
        text: "Main Menu Scene"
      }*/
+
+    Image {
+        x: parent.width-100
+        y: 50
+        z: 50
+        scale: 1
+        source: "../../assets/UI/new/sound_icon.png"
+        height:75
+        width:75
+        id: mutebutton
+
+
+
+        MouseArea {
+               anchors.fill: parent
+               onClicked: {
+                   if(Global.mute==0)
+                   {
+                       mutebutton.source="../../assets/UI/new/mute_icon.png";
+                       Global.mute=1;
+                   }
+                   else{
+                       mutebutton.source="../../assets/UI/new/sound_icon.png";
+                       Global.mute=0;
+                   }
+
+                 }
+           }
+    }
+
 
     Image {
         anchors.horizontalCenter: parent.horizontalCenter

@@ -99,7 +99,7 @@ Scene {
             z: 50
             width: 50
             height: 50
-            source: (activeLevel == 1) ? "../../assets/UI/level_sel.png" : "../../assets/UI/level_done.png"
+            source: (activeLevel == 1) ? "../../assets/UI/level_done.png" : "../../assets/UI/new/button_planet.png"
             id: level1img
         }
 
@@ -137,7 +137,7 @@ Scene {
             z: 50
             width: 50
             height: 50
-            source: (activeLevel == 2) ? "../../assets/UI/level_sel.png" : "../../assets/UI/level_done.png"
+            source: (activeLevel == 2) ? "../../assets/UI/level_done.png" : "../../assets/UI/new/button_planet.png"
             id: level2img
         }
 
@@ -177,7 +177,7 @@ Scene {
             z: 50
             width: 50
             height: 50
-            source: (activeLevel == 3) ? "../../assets/UI/level_sel.png" : "../../assets/UI/level_done.png"
+            source: (activeLevel == 3) ? "../../assets/UI/level_done.png" : "../../assets/UI/new/button_planet.png"
             id: level3img
         }
 
@@ -217,7 +217,7 @@ Scene {
             z: 50
             width: 50
             height: 50
-            source: (activeLevel == 4) ? "../../assets/UI/level_sel.png" : "../../assets/UI/level_done.png"
+            source: (activeLevel == 4) ? "../../assets/UI/level_done.png" : "../../assets/UI/new/button_planet.png"
             id: level4img
         }
 
@@ -285,10 +285,11 @@ Scene {
 
     Image {
         anchors.horizontalCenter: parent.horizontalCenter
-        y: parent.height - 350
+        y: parent.height - 250
         z: 50
-        scale: 0.7
-        source: "../../assets/UI/Launch.png"
+        height: 100
+        width:100
+        source: "../../assets/UI/new/play_icon.png"
         id: campaign
 
 

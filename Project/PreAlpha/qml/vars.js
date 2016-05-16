@@ -22,7 +22,7 @@ var id20=0;
 var globalshipid=0;
 var activeid=0;
 
-
+var mute=0;
 
 var module = {
 

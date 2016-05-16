@@ -6,6 +6,7 @@ import "../../Modules"
 import "../../Player"
 import "../../Scenes"
 import "../"
+import "../../vars.js" as Global
 
 BaseLevel {
     id: level1
@@ -23,8 +24,11 @@ BaseLevel {
 
 
       Component.onCompleted: {
+          if(Global.mute==0){
           backgroundMusic.source = "../../../assets/Music/Rhinoceros.mp3";
           backgroundMusic.play();
+
+          }
       }
 
 
