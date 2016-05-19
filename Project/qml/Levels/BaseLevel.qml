@@ -26,6 +26,7 @@ Item {
     property int kills: 0
 
 
+
     BackgroundMusic {
         id: backgroundMusic
         autoPlay: false
@@ -46,6 +47,15 @@ Item {
         interval: 3000; running: false; repeat: false;
         onTriggered: victory();
     }
+
+
+    ParallaxScrollingBackground {
+          movementVelocity: Qt.point(0,20)
+          ratio: Qt.point(1.0,1.0)
+          opacity: 0.7
+          sourceImage: "../../assets/Sectors/Sector3/parallax1.png"
+          sourceImage2: "../../assets/Sectors/Sector3/parallax2.png"
+        }
 
 
 

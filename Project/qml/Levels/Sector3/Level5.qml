@@ -51,7 +51,7 @@ BaseLevel {
                   level: level5
               }
 
-                entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("../../Enemy/Sector1/Boss1.qml"), newEntityProperties  );
+                entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("../../Enemy/Sector3/Boss1.qml"), newEntityProperties  );
 
               currentSpawns++;
           } else {

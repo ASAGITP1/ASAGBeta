@@ -7,6 +7,8 @@ DEPLOYMENTFOLDERS += qmlFolder # comment for publishing
 assetsFolder.source = assets
 DEPLOYMENTFOLDERS += assetsFolder
 
+CONFIG(release, debug|release):DEFINES += QT_NO_DEBUG_OUTPUT
+
 # Add more folders to ship with the application here
 
 RESOURCES += #    resources.qrc # uncomment for publishing

@@ -10,16 +10,16 @@ import "../"
 import "../../vars.js" as Global
 
 BaseLevel {
-    id: level3
-    levelName: "Level3"
+    id: level4
+    levelName: "Level4"
     playerP: player
 
-    totalSpawns: 15
+    totalSpawns: 40
 
 
       Timer {
           id: timer
-          interval: 2000; running: active; repeat: true
+          interval: 800; running: active; repeat: true
           onTriggered: spawnEnemy()
          }
 
@@ -48,10 +48,15 @@ BaseLevel {
                   x: Math.random() * (scene.width - 100) + 50,
                   y: 10,
                   player: playerP,
-                  level: level3
+                  level: level4
               }
 
-             entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("../../Enemy/Sector1/Enemy2.qml"), newEntityProperties  );
+              if(Math.random() > 0.4) {
+                entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("../../Enemy/Sector3/Enemy1.qml"), newEntityProperties  );
+              } else {
+                  entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("../../Enemy/Sector3/Enemy2.qml"), newEntityProperties  );
+              }
+
               currentSpawns++;
           } else {
                 timer.running = false;

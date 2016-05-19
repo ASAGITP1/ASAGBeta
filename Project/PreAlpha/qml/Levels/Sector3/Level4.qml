@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import VPlay 2.0
 
+
 import "../../Enemy"
 import "../../Modules"
 import "../../Player"
@@ -9,25 +10,24 @@ import "../"
 import "../../vars.js" as Global
 
 BaseLevel {
-    id: level1
-    levelName: "Level1"
+    id: level4
+    levelName: "Level4"
     playerP: player
 
-    totalSpawns: 30
+    totalSpawns: 40
 
 
       Timer {
           id: timer
-          interval: 400; running: active; repeat: true
+          interval: 800; running: active; repeat: true
           onTriggered: spawnEnemy()
          }
 
 
       Component.onCompleted: {
           if(Global.mute==0){
-          backgroundMusic.source = "../../../assets/Music/Rhinoceros.mp3";
+          backgroundMusic.source = "../../assets/Music/Rhinoceros.mp3";
           backgroundMusic.play();
-
           }
       }
 
@@ -48,16 +48,22 @@ BaseLevel {
                   x: Math.random() * (scene.width - 100) + 50,
                   y: 10,
                   player: playerP,
-                  level: level1
+                  level: level4
               }
 
-             entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("../../Enemy/Sector1/Enemy1.qml"), newEntityProperties  );
+              if(Math.random() > 0.4) {
+                entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("../../Enemy/Sector3/Enemy1.qml"), newEntityProperties  );
+              } else {
+                  entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("../../Enemy/Sector3/Enemy2.qml"), newEntityProperties  );
+              }
+
               currentSpawns++;
           } else {
                 timer.running = false;
-                state = state_NOSPAWNING
+                state = STATE_NOSPAWNING
           }
       }
+
 
 }
 
