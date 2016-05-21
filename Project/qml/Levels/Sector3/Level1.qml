@@ -16,6 +16,8 @@ BaseLevel {
     totalSpawns: 30
 
 
+
+
       Timer {
           id: timer
           interval: 400; running: active; repeat: true
@@ -24,10 +26,12 @@ BaseLevel {
 
 
       Component.onCompleted: {
-          if(Global.mute==0){
-          backgroundMusic.source = "../../../assets/Music/Rhinoceros.mp3";
-          backgroundMusic.play();
+          bgimg.source = "../../assets/Sectors/Sector3/Background.png";
+          bgimg.update();
 
+          if(Global.mute==0){
+              backgroundMusic.source = "../../../assets/Music/Rhinoceros.mp3";
+              backgroundMusic.play();
           }
       }
 

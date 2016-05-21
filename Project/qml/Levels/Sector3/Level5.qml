@@ -17,6 +17,19 @@ BaseLevel {
     totalSpawns: 1
 
 
+    background.source: "../../../assets/Sectors/Sector3/Background.png"
+
+
+    ParallaxScrollingBackground {
+          movementVelocity: Qt.point(0,10)
+          ratio: Qt.point(1.0,1.0)
+          opacity: 0.7
+          sourceImage: "../../assets/Sectors/Sector3/parallaxstars.png"
+        }
+
+
+
+
       Timer {
           id: timer
           interval: 800; running: active; repeat: true

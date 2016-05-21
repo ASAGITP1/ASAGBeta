@@ -12,7 +12,7 @@ Item {
     property Player playerP
     property Scene scene;
     property BackgroundMusic backgroundMusic: backgroundMusic
-
+    property Image bgimg: background;
 
     property int state_RUNNING: 0
     property int state_NOSPAWNING: 1
@@ -36,9 +36,29 @@ Item {
     Image {
         id: background
         anchors.fill: parent
-        source: "../../assets/UI/Background.png"
         z: 0
     }
+
+
+
+    ParallaxScrollingBackground {
+        id: parallax1
+          movementVelocity: Qt.point(0,35)
+          ratio: Qt.point(1.0,1.0)
+          opacity: 0.7
+          z: 5
+          sourceImage: "../../assets/Sectors/Sector3/parallax1.png"
+          sourceImage2: "../../assets/Sectors/Sector3/parallax2.png"
+        }
+
+    ParallaxScrollingBackground {
+        id: parallax2
+          movementVelocity: Qt.point(0,10)
+          ratio: Qt.point(1.0,1.0)
+          opacity: 0.7
+          z: 4
+          sourceImage: "../../assets/Sectors/Sector3/parallaxstars.png"
+        }
 
 
 
@@ -47,17 +67,6 @@ Item {
         interval: 3000; running: false; repeat: false;
         onTriggered: victory();
     }
-
-
-    ParallaxScrollingBackground {
-          movementVelocity: Qt.point(0,30)
-          ratio: Qt.point(1.0,1.0)
-          opacity: 0.7
-          sourceImage: "../../assets/Sectors/Sector3/parallax1.png"
-          sourceImage2: "../../assets/Sectors/Sector3/parallax2.png"
-        }
-
-
 
 
     function checkVictory() {
