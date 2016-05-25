@@ -15,7 +15,7 @@ EntityBase{
     height: 150
     z: 20
 
-    property int hp: 200
+    property int hp: 1000
 
     property int shootingRange:         1700         // distance in pixel
     property double shootingAngle:      40       // angle on one side
@@ -32,7 +32,7 @@ EntityBase{
 
     Image {
         id:image
-        source: "../../../assets/Sectors/Sector1/Enemies/Boss1.png"
+        source: "../../../assets/Sectors/Sector4/Enemies/Boss1.png"
          anchors.fill: parent
     }
 
@@ -84,7 +84,7 @@ EntityBase{
             x: enemyX - 5,
             y: enemyY + 50,
             offset: offset,
-            dmg: 1,
+            dmg: 100,
             inaccmod: .20,              // in %
             shottype: "eshot1"
         }

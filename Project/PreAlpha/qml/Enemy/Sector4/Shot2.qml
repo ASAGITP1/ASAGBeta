@@ -53,7 +53,7 @@ EntityBase {
 
         function startPhys() {
 
-            var speed = Math.floor( Math.random() * 300) + 1000
+            var speed = Math.floor( Math.random() * 300) + 500
             var inacc = Math.floor((Math.random() - 0.5) * 500) * inaccmod
             var targeting = Math.floor(speed * offset) + inacc
             collider.linearVelocity = Qt.point(targeting, speed)

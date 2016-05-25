@@ -29,7 +29,7 @@ EntityBase{
 
     Image {
         id:image
-        source: "../../../assets/Sectors/Sector1/Enemies/Enemy1.png"
+        source: "../../../assets/Sectors/Sector4/Enemies/Enemy1.png"
          anchors.fill: parent
     }
 
@@ -82,7 +82,7 @@ EntityBase{
             y: enemy.y + enemy.height + 50,
             z: 10,
             offset: offset,
-            dmg: 1,
+            dmg: 2,
             shottype: "eshot1"
         }
 
