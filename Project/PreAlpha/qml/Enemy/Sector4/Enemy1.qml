@@ -11,8 +11,8 @@ import "../../Levels"
 EntityBase{
     id:enemy
     entityType: "enemy"
-    width: 75
-    height: 75
+    width: 125
+    height: 125
     z: 20
     property int hp: 20
     property bool killed: false

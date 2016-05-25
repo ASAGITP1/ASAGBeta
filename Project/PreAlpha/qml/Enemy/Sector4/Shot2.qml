@@ -23,16 +23,16 @@ EntityBase {
 
         Image {
             id:image
-            source: "../../../assets/Sectors/Sector4/Enemies/eshot.png"
+            source: "../../../assets/Sectors/Sector4/Enemies/rbshot.png"
             height: 50
-            width: 20
+            width: 50
         }
 
 
         BoxCollider {
             id: collider
             height: 10
-            width: 5
+            width: 15
             bullet: true
             categories: Box.Category1
             collidesWith: Box.Category4
@@ -66,7 +66,7 @@ EntityBase {
 
         function selectShot() {
             if(shottype == "enemy") {
-                image.source = "../../assets/Sectors/Sector4/Enemies/eshot.png";
+                image.source = "../../assets/Sectors/Sector4/Enemies/rbshot.png";
             }
         }
 

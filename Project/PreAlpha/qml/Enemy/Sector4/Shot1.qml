@@ -23,7 +23,7 @@ EntityBase {
 
         Image {
             id:image
-            source: "../../../assets/Sectors/Sector4/Enemies/eshot.png"
+            source: "../../../assets/Sectors/Sector4/Enemies/butshot.png"
             height: 50
             width: 20
         }
@@ -66,7 +66,7 @@ EntityBase {
 
         function selectShot() {
             if(shottype == "enemy") {
-                image.source = "../../assets/Sectors/Sector4/Enemies/eshot.png";
+                image.source = "../../assets/Sectors/Sector4/Enemies/butshot.png";
             }
         }
 

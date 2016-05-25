@@ -13,7 +13,7 @@ BaseLevel {
     levelName: "Level1"
     playerP: player
 
-    totalSpawns: 30
+    totalSpawns: 15
 
 
 
@@ -26,7 +26,7 @@ BaseLevel {
 
 
       Component.onCompleted: {
-          bgimg.source = "../../../assets/Sectors/Sector3/Background.png";
+          bgimg.source = "../../../assets/Sectors/Sector4/Background.png";
           bgimg.update();
 
           if(Global.mute==0){
@@ -55,7 +55,7 @@ BaseLevel {
                   level: level1
               }
 
-             entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("../../Enemy/Sector3/Enemy1.qml"), newEntityProperties  );
+             entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("../../Enemy/Sector4/Enemy1.qml"), newEntityProperties  );
               currentSpawns++;
           } else {
                 timer.running = false;

@@ -17,14 +17,13 @@ BaseLevel {
     totalSpawns: 1
 
 
-    background.source: "../../../assets/Sectors/Sector3/Background.png"
 
 
     ParallaxScrollingBackground {
           movementVelocity: Qt.point(0,10)
           ratio: Qt.point(1.0,1.0)
           opacity: 0.7
-          sourceImage: "../../assets/Sectors/Sector3/parallaxstars.png"
+          sourceImage: "../../assets/Sectors/Sector4/parallaxstars.png"
         }
 
 
@@ -38,6 +37,9 @@ BaseLevel {
 
 
       Component.onCompleted: {
+          bgimg.source = "../../../assets/Sectors/Sector4/Background.png";
+          bgimg.update();
+
           if(Global.mute==0){
           backgroundMusic.source = "../../../assets/Music/Rhinoceros.mp3";
           backgroundMusic.play();
@@ -64,7 +66,7 @@ BaseLevel {
                   level: level5
               }
 
-                entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("../../Enemy/Sector3/Boss1.qml"), newEntityProperties  );
+                entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("../../Enemy/Sector4/Boss1.qml"), newEntityProperties  );
 
               currentSpawns++;
           } else {

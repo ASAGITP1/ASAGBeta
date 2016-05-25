@@ -15,10 +15,8 @@ BaseLevel {
     playerP: player
 
 
-    totalSpawns: 30
+    totalSpawns: 15
 
-
-    background.source: "../../../assets/Sectors/Sector3/Background.png"
 
 
 
@@ -26,15 +24,15 @@ BaseLevel {
           movementVelocity: Qt.point(0,30)
           ratio: Qt.point(1.0,1.0)
           opacity: 0.7
-          sourceImage: "../../assets/Sectors/Sector3/parallax1.png"
-          sourceImage2: "../../assets/Sectors/Sector3/parallax2.png"
+          sourceImage: "../../assets/Sectors/Sector4/parallax1.png"
+          sourceImage2: "../../assets/Sectors/Sector4/parallax2.png"
         }
 
     ParallaxScrollingBackground {
           movementVelocity: Qt.point(0,10)
           ratio: Qt.point(1.0,1.0)
           opacity: 0.7
-          sourceImage: "../../assets/Sectors/Sector3/parallaxstars.png"
+          sourceImage: "../../assets/Sectors/Sector4/parallaxstars.png"
         }
 
 
@@ -47,6 +45,9 @@ BaseLevel {
 
 
       Component.onCompleted: {
+          bgimg.source = "../../../assets/Sectors/Sector4/Background.png";
+          bgimg.update();
+
           if(Global.mute==0){
           backgroundMusic.source = "../../assets/Music/Undaunted.mp3";
           backgroundMusic.play();
@@ -73,7 +74,7 @@ BaseLevel {
                   level: level2
               }
 
-             entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("../../Enemy/Sector3/Enemy1.qml"), newEntityProperties  );
+             entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("../../Enemy/Sector4/Enemy1.qml"), newEntityProperties  );
               currentSpawns++;
           } else {
                 timer.running = false;

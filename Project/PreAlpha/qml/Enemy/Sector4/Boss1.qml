@@ -12,7 +12,7 @@ EntityBase{
     id:enemy
     entityType: "enemy"
     width: 150
-    height: 150
+    height: 225
     z: 20
 
     property int hp: 1000
@@ -89,7 +89,7 @@ EntityBase{
             shottype: "eshot1"
         }
 
-       entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("Shot1.qml"), newEntityProperties  )
+       entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("Shot2.qml"), newEntityProperties  )
     }
 
 
