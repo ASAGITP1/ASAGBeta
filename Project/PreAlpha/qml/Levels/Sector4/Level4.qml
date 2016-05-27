@@ -14,7 +14,7 @@ BaseLevel {
     levelName: "Level4"
     playerP: player
 
-    totalSpawns: 40
+    totalSpawns: 20
 
 
 

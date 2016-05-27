@@ -86,7 +86,7 @@ EntityBase{
             shottype: "eshot1"
         }
 
-       entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("Shot1.qml"), newEntityProperties  )
+       entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("Shot2.qml"), newEntityProperties  )
     }
 
 

@@ -14,7 +14,7 @@ EntityBase{
     width: 125
     height: 125
     z: 20
-    property int hp: 20
+    property int hp: 50
     property bool killed: false
 
     property int shootingRange:         1000         // distance in pixel
@@ -76,6 +76,17 @@ EntityBase{
     function shoot(player) {
 
         var offset = (enemy.x - playerX) / (enemy.y - playerY)
+
+        var newEntityProperties = {
+            x: enemy.x + enemy.width/2 - 5,
+            y: enemy.y + enemy.height + 50,
+            z: 10,
+            offset: offset,
+            dmg: 2,
+            shottype: "eshot1"
+        }
+
+       entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("Shot1.qml"), newEntityProperties  )
 
         var newEntityProperties = {
             x: enemy.x + enemy.width/2 - 5,

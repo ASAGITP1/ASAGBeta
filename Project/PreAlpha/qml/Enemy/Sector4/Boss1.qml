@@ -80,6 +80,7 @@ EntityBase{
 
         var offset = (enemyX - playerX) / (enemyY - playerY)
 
+        for(var i=0;i<4;i++){
         var newEntityProperties = {
             x: enemyX - 5,
             y: enemyY + 50,
@@ -89,7 +90,8 @@ EntityBase{
             shottype: "eshot1"
         }
 
-       entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("Shot2.qml"), newEntityProperties  )
+       entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("ShotB1.qml"), newEntityProperties  )
+        }
     }
 
 

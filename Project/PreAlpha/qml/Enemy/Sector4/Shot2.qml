@@ -23,16 +23,16 @@ EntityBase {
 
         Image {
             id:image
-            source: "../../../assets/Sectors/Sector4/Enemies/rbshot.png"
+            source: "../../../assets/Sectors/Sector4/Enemies/butshot.png"
             height: 50
-            width: 50
+            width: 20
         }
 
 
         BoxCollider {
             id: collider
             height: 10
-            width: 15
+            width: 5
             bullet: true
             categories: Box.Category1
             collidesWith: Box.Category4
@@ -59,14 +59,14 @@ EntityBase {
             collider.linearVelocity = Qt.point(targeting, speed)
 
             var tanval = speed / targeting
-            var angle = Math.atan(tanval) * 57
+            var angle = (Math.random() + 45)*2
             var rot = (angle < 0) ? (angle+90) : (angle-90)
             shotEntity.rotation = rot
         }
 
         function selectShot() {
             if(shottype == "enemy") {
-                image.source = "../../assets/Sectors/Sector4/Enemies/rbshot.png";
+                image.source = "../../assets/Sectors/Sector4/Enemies/butshot.png";
             }
         }
 
