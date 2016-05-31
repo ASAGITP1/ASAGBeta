@@ -20,7 +20,7 @@ BaseLevel {
 
       Timer {
           id: timer
-          interval: 400; running: active; repeat: true
+          interval: 1500; running: active; repeat: true
           onTriggered: spawnEnemy()
          }
 
