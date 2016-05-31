@@ -62,6 +62,15 @@ Item {
         }
 
 
+    Image {
+        id: victoryimg
+        source: "../../../assets/UI/Victory.png"
+        x: 70
+        y: 600
+        z: 500
+        opacity: 0
+    }
+
 
     Timer {
         id: victoryTimer
@@ -74,6 +83,7 @@ Item {
         if(kills >= totalSpawns) {
             console.debug("Victory! Kills: " + kills + ", Total Spawns: " + totalSpawns);
             victoryTimer.start();
+            victoryimg.opacity = 1;
         }
     }
 
