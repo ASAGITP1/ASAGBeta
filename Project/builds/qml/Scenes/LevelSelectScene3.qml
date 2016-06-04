@@ -101,7 +101,7 @@ Scene {
             z: 50
             width: 50
             height: 50
-            source: (activeLevel == 1) ? "../../assets/UI/LVL/s2lvl.png" : "../../assets/UI/LVL/s2lvl.png"
+            source: (activeLevel == 1) ? "../../assets/UI/LVL/s3lvl.png" : "../../assets/UI/LVL/s3lvl.png"
             id: level1img
         }
 
@@ -139,7 +139,7 @@ Scene {
             z: 50
             width: 50
             height: 50
-            source: (activeLevel == 2) ? "../../assets/UI/LVL/s2lvl.png" : "../../assets/UI/LVL/s2lvl.png"
+            source: (activeLevel == 2) ? "../../assets/UI/LVL/s3lvl.png" : "../../assets/UI/LVL/s3lvl.png"
             id: level2img
         }
 
@@ -179,7 +179,7 @@ Scene {
             z: 50
             width: 50
             height: 50
-            source: (activeLevel == 3) ? "../../assets/UI/LVL/s2lvl.png" : "../../assets/UI/LVL/s2lvl.png"
+            source: (activeLevel == 3) ? "../../assets/UI/LVL/s3lvl.png" : "../../assets/UI/LVL/s3lvl.png"
             id: level3img
         }
 
@@ -219,7 +219,7 @@ Scene {
             z: 50
             width: 50
             height: 50
-            source: (activeLevel == 4) ? "../../assets/UI/LVL/s2lvl.png" : "../../assets/UI/LVL/s2lvl.png"
+            source: (activeLevel == 4) ? "../../assets/UI/LVL/s3lvl.png" : "../../assets/UI/LVL/s3lvl.png"
             id: level4img
         }
 
