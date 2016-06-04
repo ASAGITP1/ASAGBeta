@@ -43,3 +43,6 @@ HEADERS += \
 #DISTFILES += \
 #    qml/Enemy/Enemy1.qml
 
+DISTFILES += \
+    assets/UI/SectorSelector/Sector2.png
+

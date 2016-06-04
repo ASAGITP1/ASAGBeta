@@ -127,7 +127,7 @@ Scene {
             z: 50
             width: 50
             height: 50
-            source: (selectedSector == 1) ? "../../assets/UI/SectorSelector/Sector3.png" : "../../assets/UI/SectorSelector/Sector3.png"
+            source: (selectedSector == 1) ? "../../assets/UI/SectorSelector/Sector2.png" : "../../assets/UI/SectorSelector/Sector2.png"
             id: level2img
         }
 

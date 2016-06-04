@@ -25,36 +25,23 @@ BaseLevel {
 
 
       Component.onCompleted: {
-          bgimg.source = "../../../assets/Sectors/Sector3/Background.png";
+
+          bgimg.source = "../../../assets/Sectors/Sector2/Background.png"
           bgimg.update();
 
           if(Global.mute==0){
-              backgroundMusic.source = "../../../assets/Music/Rhinoceros.mp3";
+            //  backgroundMusic.source = "../../../assets/Music/A Night Of Dizzy Spells.mp3";
               backgroundMusic.play();
           }
       }
 
-
       ParallaxScrollingBackground {
-          id: parallax1
-            movementVelocity: Qt.point(0,35)
+            movementVelocity: Qt.point(0,30)
             ratio: Qt.point(1.0,1.0)
-            opacity: 0.7
-            z: 5
-            sourceImage: "../../assets/Sectors/Sector3/parallax1.png"
-            sourceImage2: "../../assets/Sectors/Sector3/parallax2.png"
+            opacity: 1
+            z: 6
+            sourceImage: "../../../assets/Sectors/Sector2/parallax.png"
           }
-
-      ParallaxScrollingBackground {
-          id: parallax2
-            movementVelocity: Qt.point(0,10)
-            ratio: Qt.point(1.0,1.0)
-            opacity: 0.7
-            z: 4
-            sourceImage: "../../assets/Sectors/Sector3/parallaxstars.png"
-          }
-
-
 
 
       Player {
@@ -76,7 +63,7 @@ BaseLevel {
                   level: level1
               }
 
-             entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("../../Enemy/Sector3/Enemy1.qml"), newEntityProperties  );
+             entityManager.createEntityFromUrlWithProperties( Qt.resolvedUrl("../../Enemy/Sector2/Enemy1.qml"), newEntityProperties  );
               currentSpawns++;
           } else {
                 timer.running = false;

@@ -51,7 +51,7 @@ OBJECTS       = debug/main.o \
 		debug/moc_xread.o \
 		debug/moc_xwrite.o
 
-DIST          =  ..\PreAlpha\xread.h \
+DIST          = assets/UI/SectorSelector/Sector2.png ..\PreAlpha\xread.h \
 		..\PreAlpha\xwrite.h ..\PreAlpha\main.cpp
 QMAKE_TARGET  = PreAlpha
 DESTDIR        = debug\ #avoid trailing-slash linebreak
