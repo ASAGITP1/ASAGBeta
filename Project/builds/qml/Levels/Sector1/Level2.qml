@@ -62,6 +62,7 @@ BaseLevel {
       Player {
           id: player
           sceneP: scene
+          damageObject: parent.damageObject
           x: 200
           y: parent.height - player.height - 100
           z: 20

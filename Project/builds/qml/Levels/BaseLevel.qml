@@ -13,6 +13,7 @@ Item {
     property Scene scene;
     property BackgroundMusic backgroundMusic: backgroundMusic
     property Image bgimg: background
+    property DamageObject damageObject: damageObject
 
     property int state_RUNNING: 0
     property int state_NOSPAWNING: 1
@@ -59,6 +60,15 @@ Item {
         interval: 3000; running: false; repeat: false;
         onTriggered: victory();
     }
+
+
+    DamageObject {
+        id: damageObject
+        z: 400
+        x: 700
+        y: 1600
+    }
+
 
 
     function checkVictory() {

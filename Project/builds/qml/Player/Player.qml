@@ -7,12 +7,15 @@ import "../Enemy"
 import "../Modules"
 import "../Player"
 import "../Scenes"
+import "../Levels"
 
 EntityBase {
     id: playerr
     entityType: "playership"
     width: 150
     height: 150
+
+    property DamageObject damageObject
 
     property Scene sceneP: scene
     property alias controller: twoAxisController
@@ -79,7 +82,8 @@ EntityBase {
         x: 50
         y: 0
         z: 50
-        opacity: 0.5
+        property int modnum: 1
+        opacity: 0
         dynamicModule: moduleList.modules[xread.readXML("slot", 1)]
         player: playerr
     }
@@ -88,7 +92,8 @@ EntityBase {
         x: 0
         y: 50
         z: 50
-        opacity: 0.5
+        property int modnum: 2
+        opacity: 0
         dynamicModule: moduleList.modules[xread.readXML("slot", 2)]
         player: playerr
     }
@@ -97,7 +102,8 @@ EntityBase {
         x: 50
         y: 50
         z: 50
-        opacity: 0.5
+        property int modnum: 3
+        opacity: 0
         dynamicModule: moduleList.modules[xread.readXML("slot", 3)]
         player: playerr
     }
@@ -106,7 +112,8 @@ EntityBase {
         x: 100
         y: 50
         z: 50
-        opacity: 0.5
+        property int modnum: 4
+        opacity: 0
         dynamicModule: moduleList.modules[xread.readXML("slot", 4)]
         player: playerr
     }
@@ -115,7 +122,8 @@ EntityBase {
         x: 0
         y: 100
         z: 50
-        opacity: 0.5
+        property int modnum: 5
+        opacity: 0
         dynamicModule: moduleList.modules[xread.readXML("slot", 5)]
         player: playerr
     }
@@ -124,7 +132,8 @@ EntityBase {
         x: 50
         y: 100
         z: 50
-        opacity: 0.5
+        property int modnum: 6
+        opacity: 0
         dynamicModule: moduleList.modules[xread.readXML("slot", 6)]
         player: playerr
     }
@@ -133,7 +142,8 @@ EntityBase {
         x: 100
         y: 100
         z: 50
-        opacity: 0.5
+        property int modnum: 7
+        opacity: 0
         dynamicModule: moduleList.modules[xread.readXML("slot", 7)]
         player: playerr
     }
@@ -143,6 +153,7 @@ EntityBase {
 
     function initialize() {
         calcSpeed();
+        console.log("P Debug: " + damageObject);
     }
 
     function calcSpeed() {

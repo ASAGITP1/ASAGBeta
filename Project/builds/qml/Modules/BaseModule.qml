@@ -39,8 +39,10 @@ EntityBase {
                 var dmg = other.getBody().target.dmg;
                 hp -= dmg;
                 other.getBody().target.removeEntity();
-                if(hp <= 0)
+                if(hp <= 0) {
                    working = false;
+                    thisentity.parent.parent.player.damageObject.heDed(thisentity.parent.parent.modnum);
+                }
             }
         }
 }
