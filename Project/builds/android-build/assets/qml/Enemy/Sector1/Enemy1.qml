@@ -14,11 +14,11 @@ EntityBase{
     width: 75
     height: 75
     z: 20
-    property int hp: 20
+    property int hp: 15
     property bool killed: false
 
-    property int shootingRange:         1000         // distance in pixel
-    property double shootingAngle:      40          // angle on one side
+    property int shootingRange:         1200         // distance in pixel
+    property double shootingAngle:      30          // angle on one side
 
     property Player player;
     property int playerX: player.x + player.width/2;
@@ -82,7 +82,7 @@ EntityBase{
             y: enemy.y + enemy.height + 50,
             z: 10,
             offset: offset,
-            dmg: 1,
+            dmg: 0.5,
             shottype: "eshot1"
         }
 

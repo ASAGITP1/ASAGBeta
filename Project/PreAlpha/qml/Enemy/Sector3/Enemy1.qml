@@ -94,7 +94,7 @@ EntityBase{
 
 
     function startPhys() {
-        collider.linearVelocity = Qt.point(0, 120)
+        collider.linearVelocity = Qt.point(0, 200)
     }
 
     function getHit(other, type) {

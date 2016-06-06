@@ -14,7 +14,7 @@ EntityBase{
     width: 125
     height: 125
     z: 20
-    property int hp: 75
+    property int hp: 60
     property bool killed: false
 
     property int shootingRange:         1800         // distance in pixel

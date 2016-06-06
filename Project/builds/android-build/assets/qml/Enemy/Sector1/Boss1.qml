@@ -15,10 +15,10 @@ EntityBase{
     height: 150
     z: 20
 
-    property int hp: 200
+    property int hp: 100
 
-    property int shootingRange:         1700         // distance in pixel
-    property double shootingAngle:      40          // angle on one side
+    property int shootingRange:         1900         // distance in pixel
+    property double shootingAngle:      80          // angle on one side
 
     property Player player;
     property int playerX: player.x + player.width/2;
@@ -56,7 +56,7 @@ EntityBase{
 
 
     Timer {
-           interval: 200; running: true; repeat: true
+           interval: 500; running: true; repeat: true
            onTriggered: trackingSystem()
        }
 
@@ -85,7 +85,7 @@ EntityBase{
             y: enemyY + 50,
             offset: offset,
             dmg: 1,
-            inaccmod: .20,              // in %
+            inaccmod: .10,              // in %
             shottype: "eshot1"
         }
 

@@ -40,7 +40,7 @@ EntityBase {
 
         Timer {
                interval: 500; running: true; repeat: true
-               onTriggered: if(y > 1400) shotEntity.removeEntity()
+               onTriggered: if(y > 2400) shotEntity.removeEntity()
         }
 
         Component.onCompleted: completed()
@@ -53,7 +53,7 @@ EntityBase {
 
         function startPhys() {
 
-            var speed = Math.floor( Math.random() * 300) + 100
+            var speed = Math.floor( Math.random() * 200) + 100
             var inacc = Math.floor((Math.random() - 0.5) * 500) * inaccmod
             var targeting = Math.floor(speed * offset) + inacc
             collider.linearVelocity = Qt.point(targeting, speed)

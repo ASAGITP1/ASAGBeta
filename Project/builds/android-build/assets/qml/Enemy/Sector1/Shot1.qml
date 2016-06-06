@@ -40,7 +40,7 @@ EntityBase {
 
         Timer {
                interval: 500; running: true; repeat: true
-               onTriggered: if(y > 1400) shotEntity.removeEntity()
+               onTriggered: if(y > 2400) shotEntity.removeEntity()
         }
 
         Component.onCompleted: completed()

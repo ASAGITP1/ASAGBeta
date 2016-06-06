@@ -15,7 +15,7 @@ EntityBase{
     height: 225
     z: 20
 
-    property int hp: 1000
+    property int hp: 600
 
     property int shootingRange:         1700         // distance in pixel
     property double shootingAngle:      40       // angle on one side
@@ -56,7 +56,7 @@ EntityBase{
 
 
     Timer {
-           interval: 200; running: true; repeat: true
+           interval: 400; running: true; repeat: true
            onTriggered: trackingSystem()
        }
 
@@ -85,8 +85,8 @@ EntityBase{
             x: enemyX - 5,
             y: enemyY + 50,
             offset: offset,
-            dmg: 100,
-            inaccmod: .20,              // in %
+            dmg: 500,
+            inaccmod: 1,              // in %
             shottype: "eshot1"
         }
 

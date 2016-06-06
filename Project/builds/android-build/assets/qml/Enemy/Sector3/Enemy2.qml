@@ -14,10 +14,10 @@ EntityBase{
     width: 75
     height: 75
     z: 20
-    property int hp: 75
+    property int hp: 40
     property bool killed: false
 
-    property int shootingRange:         1800         // distance in pixel
+    property int shootingRange:         1500         // distance in pixel
     property double shootingAngle:      20          // angle on one side
 
     property Player player;
@@ -53,7 +53,7 @@ EntityBase{
 
 
     Timer {
-           interval: 1000; running: true; repeat: true
+           interval: 500; running: true; repeat: true
            onTriggered: trackingSystem()
        }
 
@@ -81,8 +81,8 @@ EntityBase{
             x: enemy.x + enemy.width/2 - 5,
             y: enemy.y + enemy.height + 50,
             offset: offset,
-            dmg: 1,
-            inaccmod: .7,
+            dmg: 2,
+            inaccmod: 1.5,
             shottype: "eshot1"
         }
 
@@ -94,7 +94,7 @@ EntityBase{
 
 
     function startPhys() {
-        collider.linearVelocity = Qt.point(0, 80)
+        collider.linearVelocity = Qt.point(0, 60)
     }
 
     function getHit(other, type) {
