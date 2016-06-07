@@ -65,8 +65,8 @@ Item {
     DamageObject {
         id: damageObject
         z: 400
-        x: 700
-        y: 1600
+        x: 800
+        y: 1700
     }
 
 

@@ -55,6 +55,8 @@ Item {
         height: sheight;
         property bool broken: false;
         property int module: 0
+        color: "#44FFFFFF"
+        border.color: "#66FFFFFF"
 
         Image {
             id: img1
@@ -75,6 +77,8 @@ Item {
         height: sheight;
         property bool broken: false;
         property int module: 0
+        color: "#44FFFFFF"
+        border.color: "#66FFFFFF"
 
         Image {
             id: img2
@@ -95,6 +99,8 @@ Item {
         height: sheight;
         property bool broken: false;
         property int module: 0
+        color: "#44FFFFFF"
+        border.color: "#66FFFFFF"
 
         Image {
             id: img3
@@ -115,6 +121,8 @@ Item {
         height: sheight;
         property bool broken: false;
         property int module: 0
+        color: "#44FFFFFF"
+        border.color: "#66FFFFFF"
 
         Image {
             id: img4
@@ -135,6 +143,8 @@ Item {
         height: sheight;
         property bool broken: false;
         property int module: 0
+        color: "#44FFFFFF"
+        border.color: "#66FFFFFF"
 
         Image {
             id: img5
@@ -155,6 +165,8 @@ Item {
         height: sheight;
         property bool broken: false;
         property int module: 0
+        color: "#44FFFFFF"
+        border.color: "#66FFFFFF"
 
         Image {
             id: img6
@@ -175,6 +187,8 @@ Item {
         height: sheight;
         property bool broken: false;
         property int module: 0
+        color: "#44FFFFFF"
+        border.color: "#66FFFFFF"
 
         Image {
             id: img7

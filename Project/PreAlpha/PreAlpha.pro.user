@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 3.5.1, 2016-06-06T13:12:12. -->
+<!-- Written by QtCreator 3.5.1, 2016-06-07T14:31:24. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
-  <value type="QByteArray">{b843563e-2e77-4d37-844c-769048cfaad1}</value>
+  <value type="QByteArray">{1c9d047e-4f40-495b-803e-99d9748ce9ec}</value>
  </data>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
-  <value type="int">1</value>
+  <value type="int">0</value>
  </data>
  <data>
   <variable>ProjectExplorer.Project.EditorSettings</variable>
@@ -65,7 +65,7 @@
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.0">
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">D:/Daten/Git/ASAGBeta/Project/builds</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:/Git/ASAGBeta/Project/builds</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -227,8 +227,8 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">PreAlpha</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:D:/Daten/Git/ASAGBeta/Project/PreAlpha/PreAlpha.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">PreAlpha2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Git/ASAGBeta/Project/PreAlpha/PreAlpha.pro</value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.CommandLineArguments"></value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.ProFile">PreAlpha.pro</value>
     <value type="bool" key="Qt4ProjectManager.Qt4RunConfiguration.UseDyldImageSuffix">false</value>
@@ -249,12 +249,12 @@
   <valuemap type="QVariantMap">
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Android for armeabi-v7a (GCC 4.9, Qt 5.5.1)</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Android for armeabi-v7a (GCC 4.9, Qt 5.5.1)</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">{a071331d-a584-41c6-bf68-d1598cc4c9d9}</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">{2f35ecf2-1cbf-442f-bbfd-462123f29578}</value>
    <value type="int" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.0">
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">D:/Daten/Git/ASAGBeta/Project/builds</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:/Git/ASAGBeta/Project/build-PreAlpha-Android_for_armeabi_v7a_GCC_4_9_Qt_5_5_1-Debug</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -332,7 +332,7 @@
     <value type="bool" key="Qt4ProjectManager.Qt4BuildConfiguration.UseShadowBuild">true</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.1">
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">D:/Daten/Git/ASAGBeta/Project/build-PreAlpha-Android_for_armeabi_v7a_GCC_4_9_Qt_5_5_1-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:/Git/ASAGBeta/Project/build-PreAlpha-Android_for_armeabi_v7a_GCC_4_9_Qt_5_5_1-Release</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -470,7 +470,7 @@
     </valuelist>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">PreAlpha</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.AndroidRunConfiguration:D:/Daten/Git/ASAGBeta/Project/PreAlpha/PreAlpha.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.AndroidRunConfiguration:C:/Git/ASAGBeta/Project/PreAlpha/PreAlpha.pro</value>
     <value type="QString" key="QMakeProjectManager.QmakeAndroidRunConfiguration.ProFile">PreAlpha.pro</value>
     <value type="uint" key="RunConfiguration.QmlDebugServerPort">3768</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
