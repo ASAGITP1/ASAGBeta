@@ -48,9 +48,9 @@ Scene {
 
         id:toprec
         //upper part of the window
-        width: editorscene.width + Global.module.count * 50
+        width: editorscene.width + Global.module.count * 50 + 150
         height:editorscene.height/6
-        color:"red"
+        color:Qt.rgba(0,0,0,0.3)
 
 
         x: 0
@@ -104,43 +104,17 @@ Scene {
 
 
 
-    Rectangle{
-        //right part of top so the delete button is always on the screen
 
 
-        id:deleterec
-        //upper part of the window
-        width:300
-        height:editorscene.height/6
-        color:"red"
 
-
-        x: 440
-        y: 0
-
-    }
-
-    Rectangle{
-        //to delete modules
+    EditorModule{
         id:deletemodule
-        width:100
-        height:100
-        x: 450
-        y: 50
-        color:Qt.rgba(0,0,0,0.3)
-        border.color:"yellow"
-        border.width: 4
-
-        MouseArea{
-            anchors.fill:parent
-            onClicked:{
-                Global.activeid=0
-                deletemodule.border.color="yellow"
-                cannon1.border.color="grey"
-                cannon2.border.color="grey"
-            }
-        }
+        x_spot:450;
+        picsource: ""
+        gunid:0
     }
+
+
 
 
     Rectangle{
@@ -299,3 +273,5 @@ Scene {
  }
 
 }
+
+

@@ -15,6 +15,8 @@ Item {
     property url picsource;
     property int x_spot;
     property int gunid;
+    property int fadevalue;
+
 
 
     Rectangle{
@@ -35,7 +37,9 @@ Item {
                 MouseArea{
                     anchors.fill:parent
                     onClicked:{
-                        Global.activeid=gunid
+                        Global.activeid=gunid;
+
+
 
                     }
 
@@ -43,4 +47,25 @@ Item {
             }
     }
 
+    Timer {
+           id:fadeaway
+           interval: 100; running: true; repeat: true
+           onTriggered: fade();
+    }
+
+    function fade(){
+        if(Global.activeid==gunid){
+            cannon1.border.color=Qt.rgba(255,255,0,1)
+
+        }
+        else{
+            cannon1.border.color="grey"
+
+        }
+    }
+
 }
+
+
+
+
