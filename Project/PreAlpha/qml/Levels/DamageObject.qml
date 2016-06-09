@@ -63,7 +63,7 @@ Item {
             height: parent.height
             width: parent.width
             z: 400;
-            source:(parent.broken) ? "../../../assets/Player/" + srces[parent.module] + "_broken.png" : "../../../assets/Player/" + srces[parent.module] + ".png"
+            source:(parent.broken) ? "../../assets/Player/" + srces[parent.module] + "_broken.png" : "../../assets/Player/" + srces[parent.module] + ".png"
         }
     }
 
@@ -85,7 +85,7 @@ Item {
             height: parent.height
             width: parent.width
             z: 400;
-            source:(parent.broken) ? "../../../assets/Player/" + srces[parent.module] + "_broken.png" : "../../../assets/Player/" + srces[parent.module] + ".png"
+            source:(parent.broken) ? "../../assets/Player/" + srces[parent.module] + "_broken.png" : "../../assets/Player/" + srces[parent.module] + ".png"
         }
     }
 
@@ -107,7 +107,7 @@ Item {
             height: parent.height
             width: parent.width
             z: 400;
-            source:(parent.broken) ? "../../../assets/Player/" + srces[parent.module] + "_broken.png" : "../../../assets/Player/" + srces[parent.module] + ".png"
+            source:(parent.broken) ? "../../assets/Player/" + srces[parent.module] + "_broken.png" : "../../assets/Player/" + srces[parent.module] + ".png"
         }
     }
 
@@ -129,7 +129,7 @@ Item {
             height: parent.height
             width: parent.width
             z: 400;
-            source:(parent.broken) ? "../../../assets/Player/" + srces[parent.module] + "_broken.png" : "../../../assets/Player/" + srces[parent.module] + ".png"
+            source:(parent.broken) ? "../../assets/Player/" + srces[parent.module] + "_broken.png" : "../../assets/Player/" + srces[parent.module] + ".png"
         }
     }
 
@@ -151,7 +151,7 @@ Item {
             height: parent.height
             width: parent.width
             z: 400;
-            source:(parent.broken) ? "../../../assets/Player/" + srces[parent.module] + "_broken.png" : "../../../assets/Player/" + srces[parent.module] + ".png"
+            source:(parent.broken) ? "../../assets/Player/" + srces[parent.module] + "_broken.png" : "../../assets/Player/" + srces[parent.module] + ".png"
         }
     }
 
@@ -173,7 +173,7 @@ Item {
             height: parent.height
             width: parent.width
             z: 400;
-            source:(parent.broken) ? "../../../assets/Player/" + srces[parent.module] + "_broken.png" : "../../../assets/Player/" + srces[parent.module] + ".png"
+            source:(parent.broken) ? "../../assets/Player/" + srces[parent.module] + "_broken.png" : "../../assets/Player/" + srces[parent.module] + ".png"
         }
     }
 
@@ -195,7 +195,7 @@ Item {
             height: parent.height
             width: parent.width
             z: 400;
-            source:(parent.broken) ? "../../../assets/Player/" + srces[parent.module] + "_broken.png" : "../../../assets/Player/" + srces[parent.module] + ".png"
+            source:(parent.broken) ? "../../assets/Player/" + srces[parent.module] + "_broken.png" : "../../assets/Player/" + srces[parent.module] + ".png"
         }
     }
 
