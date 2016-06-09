@@ -20,10 +20,11 @@ BaseLevel {
 
 
     ParallaxScrollingBackground {
-          movementVelocity: Qt.point(0,10)
+          movementVelocity: Qt.point(0,30)
           ratio: Qt.point(1.0,1.0)
           opacity: 0.7
-          sourceImage: "../../assets/Sectors/Sector4/parallaxstars.png"
+          sourceImage: "../../../assets/Sectors/Sector4/parallax1.png"
+          sourceImage2: "../../../assets/Sectors/Sector4/parallax2.png"
         }
 
 

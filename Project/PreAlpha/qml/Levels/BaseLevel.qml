@@ -47,7 +47,7 @@ Item {
 
     Image {
         id: victoryimg
-        source: "../../../assets/UI/Victory.png"
+        source: "../../assets/UI/Victory.png"
         x: 70
         y: 600
         z: 500
