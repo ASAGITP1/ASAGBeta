@@ -80,9 +80,12 @@ Scene {
            }
     }
 
-
-
-
+    property int rotator:
+    rotator=0;
+    Timer {
+           interval: 50; running: true; repeat: true
+           onTriggered: rotator=(rotator-10)%360
+       }
 
 
 
@@ -102,6 +105,22 @@ Scene {
             height: 50
             source: (activeLevel == 1) ? "../../assets/UI/LVL/s2lvl.png" : "../../assets/UI/LVL/s2lvl.png"
             id: level1img
+        }
+        Image{
+            x:level1img.x
+            y:level1img.y
+            width:level1img.width
+            height:level1img.height
+            scale:1.8
+            source: "../../assets/UI/selectgraphic.png"
+            visible: (activeLevel == 1) ? true : false
+            transform: Rotation{
+                origin {
+                      x: level1img.width / 2
+                      y: level1img.height / 2
+                    }angle:rotator
+            }
+
         }
 
         Text {
@@ -140,6 +159,23 @@ Scene {
             height: 50
             source: (activeLevel == 2) ? "../../assets/UI/LVL/s2lvl.png" : "../../assets/UI/LVL/s2lvl.png"
             id: level2img
+        }
+
+        Image{
+            x:level2img.x
+            y:level2img.y
+            width:level2img.width
+            height:level2img.height
+            scale:1.8
+            source: "../../assets/UI/selectgraphic.png"
+            visible: (activeLevel == 2) ? true : false
+            transform: Rotation{
+                origin {
+                      x: level2img.width / 2
+                      y: level2img.height / 2
+                    }angle:rotator
+            }
+
         }
 
         Text {
@@ -181,6 +217,22 @@ Scene {
             source: (activeLevel == 3) ? "../../assets/UI/LVL/s2lvl.png" : "../../assets/UI/LVL/s2lvl.png"
             id: level3img
         }
+        Image{
+            x:level3img.x
+            y:level3img.y
+            width:level3img.width
+            height:level3img.height
+            scale:1.8
+            source: "../../assets/UI/selectgraphic.png"
+            visible: (activeLevel == 3) ? true : false
+            transform: Rotation{
+                origin {
+                      x: level3img.width / 2
+                      y: level3img.height / 2
+                    }angle:rotator
+            }
+
+        }
 
         Text {
            anchors.horizontalCenter: parent.horizontalCenter
@@ -221,6 +273,22 @@ Scene {
             source: (activeLevel == 4) ? "../../assets/UI/LVL/s2lvl.png" : "../../assets/UI/LVL/s2lvl.png"
             id: level4img
         }
+        Image{
+            x:level4img.x
+            y:level4img.y
+            width:level4img.width
+            height:level4img.height
+            scale:1.8
+            source: "../../assets/UI/selectgraphic.png"
+            visible: (activeLevel == 4) ? true : false
+            transform: Rotation{
+                origin {
+                      x: level4img.width / 2
+                      y: level4img.height / 2
+                    }angle:rotator
+            }
+
+        }
 
         Text {
            anchors.horizontalCenter: parent.horizontalCenter
@@ -256,8 +324,24 @@ Scene {
             z: 50
             width: 50
             height: 50
-            source: (activeLevel == 5) ? "../../assets/UI/level_bosssel.png" : "../../assets/UI/level_bossdone.png"
+            source: (activeLevel == 5) ? "../../assets/UI/level_bosssel.png" : "../../assets/UI/level_bosssel.png"
             id: level5img
+        }
+        Image{
+            x:level5img.x
+            y:level5img.y
+            width:level5img.width
+            height:level5img.height
+            scale:1.8
+            source: "../../assets/UI/selectgraphic.png"
+            visible: (activeLevel == 5) ? true : false
+            transform: Rotation{
+                origin {
+                      x: level5img.width / 2
+                      y: level5img.height / 2
+                    }angle:rotator
+            }
+
         }
 
         Text {

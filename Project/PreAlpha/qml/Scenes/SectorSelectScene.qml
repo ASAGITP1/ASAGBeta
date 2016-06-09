@@ -71,7 +71,12 @@ Scene {
     }
 
 
-
+    property int rotator:
+    rotator=0;
+    Timer {
+           interval: 50; running: true; repeat: true
+           onTriggered: rotator=(rotator-10)%360
+       }
 
 
 
@@ -90,8 +95,25 @@ Scene {
             z: 50
             width: 50
             height: 50
-            source: (selectedSector == 1) ? "../../assets/UI/SectorSelector/Sector3.png" : "../../assets/UI/SectorSelector/Sector3.png"
+            source: (selectedSector == 1) ? "../../assets/UI/SectorSelector/Sector1.png" : "../../assets/UI/SectorSelector/Sector1.png"
             id: level1img
+        }
+
+        Image{
+            x:level1img.x
+            y:level1img.y
+            width:level1img.width
+            height:level1img.height
+            scale:1.8
+            source: "../../assets/UI/selectgraphic.png"
+            visible: (selectedSector == 1) ? true : false
+            transform: Rotation{
+                origin {
+                      x: level1img.width / 2
+                      y: level1img.height / 2
+                    }angle:rotator
+            }
+
         }
 
         Text {
@@ -131,6 +153,24 @@ Scene {
             id: level2img
         }
 
+        Image{
+            x:level2img.x
+            y:level2img.y
+            width:level2img.width
+            height:level2img.height
+            scale:1.8
+            source: "../../assets/UI/selectgraphic.png"
+            visible: (selectedSector == 2) ? true : false
+            transform: Rotation{
+                origin {
+                      x: level2img.width / 2
+                      y: level2img.height / 2
+                    }angle:rotator
+            }
+
+        }
+
+
         Text {
            anchors.horizontalCenter: parent.horizontalCenter
            x: 50
@@ -169,6 +209,24 @@ Scene {
             id: level3img
         }
 
+        Image{
+            x:level3img.x
+            y:level3img.y
+            width:level3img.width
+            height:level3img.height
+            scale:1.8
+            source: "../../assets/UI/selectgraphic.png"
+            visible: (selectedSector == 3) ? true : false
+            transform: Rotation{
+                origin {
+                      x: level3img.width / 2
+                      y: level3img.height / 2
+                    }angle:rotator
+            }
+
+        }
+
+
         Text {
            anchors.horizontalCenter: parent.horizontalCenter
            x: 50
@@ -206,6 +264,24 @@ Scene {
             source: (selectedSector == 1) ? "../../assets/UI/SectorSelector/Sector4.png" : "../../assets/UI/SectorSelector/Sector4.png"
             id: level4img
         }
+
+        Image{
+            x:level4img.x
+            y:level4img.y
+            width:level4img.width
+            height:level4img.height
+            scale:1.8
+            source: "../../assets/UI/selectgraphic.png"
+            visible: (selectedSector == 4) ? true : false
+            transform: Rotation{
+                origin {
+                      x: level4img.width / 2
+                      y: level4img.height / 2
+                    }angle:rotator
+            }
+
+        }
+
 
         Text {
            anchors.horizontalCenter: parent.horizontalCenter
