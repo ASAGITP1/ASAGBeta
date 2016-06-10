@@ -6,7 +6,11 @@ import xwrite 1.0
 
 Scene {
     id: sectorselectscene
+
     property GameWindow scenemaster
+    property int selectedSector: 1;
+
+    signal levelPressed(string selectedLevel)
 
     width: 1080
     height: 1920
@@ -19,18 +23,25 @@ Scene {
     enabled: visible
 
 
-
-    signal levelPressed(string selectedLevel)
-
-    property int selectedSector: 1;
-
-
+    // Background
+    /*
     Image {
         anchors.fill: parent
-        source: "../../assets/UI/Background.png"
-        z: 0
+        source: "../../assets/UI/new/bsbackground.png"
+        z: -1
         id: background
+    }*/
+
+    ParallaxScrollingBackground {
+        anchors.fill: parent
+        movementVelocity: Qt.point(20,0);
+        ratio: Qt.point(1.0, 1.0)
+        sourceImage: "../../assets/UI/new/bsbackground.png"
+        z: 0
+        id: scrollbackground
     }
+
+
 
     Image {
         x: 100
@@ -40,7 +51,6 @@ Scene {
         source: "../../assets/UI/sector1.png"
         id: sectorbg
     }
-
 
     /*
     Text {
@@ -52,30 +62,45 @@ Scene {
      }
      */
 
+    // Backbutton
+    Image {
+        source: "../../assets/UI/new/backbutton.png"
 
-
-    Rectangle {
-        height: 50
-        width: 50
-        color: "blue"
-
-        x: gamescene.width - 50
+        anchors.left: parent.left
         y: 50
+        x: 50
+        height: 80
+        width: 150
+
+        Text {
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.left: parent.right
+            font.pixelSize: 50
+            color: "#FFFFFF"
+            text: "Back"
+            id: backbtntext
+        }
 
         MouseArea {
-               anchors.fill: parent
-               onClicked: {
-                   scenemaster.switchScene(1);
-               }
-           }
+            anchors.top: parent.top
+            anchors.left: parent.left
+            anchors.right: backbtntext.right
+            anchors.bottom: parent.bottom
+
+            onClicked: {
+               scenemaster.switchScene(1);
+            }
+        }
     }
 
 
     property int rotator:
     rotator=0;
     Timer {
-           interval: 50; running: true; repeat: true
-           onTriggered: rotator=(rotator-10)%360
+           interval: 50
+           running: true
+           repeat: true
+           onTriggered: rotator = (rotator - 10) % 360
        }
 
 

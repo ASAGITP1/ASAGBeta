@@ -62,13 +62,13 @@ Scene {
 
     // Soundbutton
     Image {
-        x: parent.width-100
+        x: parent.width - 100
         y: 50
         z: 50
         scale: 1
         source: "../../assets/UI/new/sound_icon.png"
-        height:75
-        width:75
+        height: 75
+        width: 75
         id: mutebutton
 
         MouseArea {
