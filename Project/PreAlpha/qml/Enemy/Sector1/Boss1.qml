@@ -25,7 +25,7 @@ EntityBase{
     property int playerY: player.y + player.width/2;
 
     property int enemyX: enemy.x + enemy.width/2;
-    property int enemyY: enemy.y +enemy.width/2;
+    property int enemyY: enemy.y + enemy.width/2;
 
     property BaseLevel level
 

@@ -37,11 +37,13 @@ Scene {
 
      }
 
-    Image {
+    ParallaxScrollingBackground {
         anchors.fill: parent
-        source: "../../assets/UI/Background.png"
+        movementVelocity: Qt.point(20,0);
+        ratio: Qt.point(1.0, 1.0)
+        sourceImage: "../../assets/UI/new/bsbackground.png"
         z: 0
-        id: background
+        id: scrollbackground
     }
 
     Rectangle{
@@ -101,12 +103,6 @@ Scene {
 
     }
 
-
-
-
-
-
-
     EditorModule{
         id:deletemodule
         x_spot:450;
@@ -115,29 +111,38 @@ Scene {
     }
 
 
+    // Backbutton
+    Image {
+        source: "../../assets/UI/new/confirmbutton.png"
 
+        anchors.right: parent.right
+        anchors.rightMargin: 80
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 30
+        height: 80
+        width: 80
 
-    Rectangle{
-        //back to menu
-        width: 30
-        height:30
-        color:"blue"
-
-        x: editorscene.width -40
-        y: 20
+        Text {
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.left: parent.right
+            font.pixelSize: 50
+            color: "#FFFFFF"
+            text: "Confirm"
+            id: backbtntext
+        }
 
         MouseArea {
-               anchors.fill: parent
-               onClicked: {
-                   save();
-                    scenemaster.switchScene(1);
-               }
-           }
+            anchors.top: parent.top
+            anchors.left: parent.left
+            anchors.right: backbtntext.right
+            anchors.bottom: parent.bottom
+
+            onClicked: {
+                save();
+                scenemaster.switchScene(1);
+            }
+        }
     }
-
-
-
-
 
 
     Slot{

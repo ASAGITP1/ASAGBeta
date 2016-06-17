@@ -50,6 +50,27 @@ EntityBase {
     }
 
 
+    SpriteSequenceVPlay {
+        id: fireAnimation
+
+        defaultSource: "../../assets/Player/flame.png"
+        anchors.horizontalCenter: background.horizontalCenter
+        anchors.top: background.bottom
+
+        SpriteVPlay {
+            name: "running"
+            frameCount: 4
+            frameRate: 12
+
+            frameWidth: 50
+            frameHeight: 60
+        }
+    }
+
+    function startAnim() {
+        fireAnimation.jumpTo("running");
+    }
+
 
     TwoAxisController { //for testing on the keyboard
         id: twoAxisController

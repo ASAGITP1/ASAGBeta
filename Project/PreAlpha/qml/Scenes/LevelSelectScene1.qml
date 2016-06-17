@@ -35,21 +35,23 @@ Scene {
 
 
 
-    Image {
+    ParallaxScrollingBackground {
         anchors.fill: parent
-        source: "../../assets/UI/Background.png"
+        movementVelocity: Qt.point(20,0);
+        ratio: Qt.point(1.0, 1.0)
+        sourceImage: "../../assets/UI/new/bsbackground.png"
         z: 0
-        id: background
+        id: scrollbackground
     }
 
-    Image {
+    /*Image {
         x: 100
         y: 100
         z: 50
         scale: 1.3
         source: "../../assets/UI/sector1.png"
         id: sectorbg
-    }
+    }*/
 
 
     /*
@@ -62,22 +64,35 @@ Scene {
      }
      */
 
+    // Backbutton
+    Image {
+        source: "../../assets/UI/new/backbutton.png"
 
-
-    Rectangle {
-        height: 50
-        width: 50
-        color: "blue"
-
-        x: gamescene.width - 50
+        anchors.left: parent.left
         y: 50
+        x: 50
+        height: 80
+        width: 150
+
+        Text {
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.left: parent.right
+            font.pixelSize: 50
+            color: "#FFFFFF"
+            text: "Back"
+            id: backbtntext
+        }
 
         MouseArea {
-               anchors.fill: parent
-               onClicked: {
-                   scenemaster.switchScene(1);
-               }
-           }
+            anchors.top: parent.top
+            anchors.left: parent.left
+            anchors.right: backbtntext.right
+            anchors.bottom: parent.bottom
+
+            onClicked: {
+               scenemaster.switchScene(2);
+            }
+        }
     }
 
     property int rotator:
@@ -91,21 +106,23 @@ Scene {
 
     // LEVEL 1
     Item {
-        x: 155
-        y: 530
-        height: 60
-        width: 200
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.horizontalCenterOffset: -150
+        y: parent.height * 4.5 / 7
+        height: 75
+        width: 75
 
 
         Image {
             x: 0
             y: 0
             z: 50
-            width: 50
-            height: 50
+            width: 75
+            height: 75
             source: (activeLevel == 1) ? "../../assets/UI/LVL/s2lvl.png" : "../../assets/UI/LVL/s2lvl.png"
             id: level1img
         }
+
         Image{
             x:level1img.x
             y:level1img.y
@@ -124,13 +141,13 @@ Scene {
         }
 
         Text {
-           anchors.horizontalCenter: parent.horizontalCenter
-           x: 50
-           y: 10
-           z: 50
-           font.pixelSize: 30
-           color: "#DDDDDD"
-           text: "Level 1"
+            anchors.verticalCenter: level1img.verticalCenter
+            anchors.left: level1img.right
+            anchors.leftMargin: 50
+            z: 50
+            font.pixelSize: 30
+            color: "#DDDDDD"
+            text: "Level 1"
          }
 
 
@@ -145,18 +162,18 @@ Scene {
 
     // LEVEL 2
     Item {
-        x: 205
-        y: 385
-        height: 60
-        width: 200
+        anchors.horizontalCenter: parent.horizontalCenter
+        y: parent.height * 3.75 / 7
+        height: 75
+        width: 75
 
 
         Image {
             x: 0
             y: 0
             z: 50
-            width: 50
-            height: 50
+            width: 75
+            height: 75
             source: (activeLevel == 2) ? "../../assets/UI/LVL/s2lvl.png" : "../../assets/UI/LVL/s2lvl.png"
             id: level2img
         }
@@ -179,13 +196,13 @@ Scene {
         }
 
         Text {
-           anchors.horizontalCenter: parent.horizontalCenter
-           x: 50
-           y: 10
-           z: 50
-           font.pixelSize: 30
-           color: "#DDDDDD"
-           text: "Level 2"
+            anchors.verticalCenter: level2img.verticalCenter
+            anchors.left: level2img.right
+            anchors.leftMargin: 50
+            z: 50
+            font.pixelSize: 30
+            color: "#DDDDDD"
+            text: "Level 2"
          }
 
 
@@ -202,18 +219,19 @@ Scene {
 
     // LEVEL 3
     Item {
-        x: 345
-        y: 335
-        height: 60
-        width: 200
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.horizontalCenterOffset: 150
+        y: parent.height * 3 / 7
+        height: 75
+        width: 75
 
 
         Image {
             x: 0
             y: 0
             z: 50
-            width: 50
-            height: 50
+            width: 75
+            height: 75
             source: (activeLevel == 3) ? "../../assets/UI/LVL/s2lvl.png" : "../../assets/UI/LVL/s2lvl.png"
             id: level3img
         }
@@ -235,13 +253,13 @@ Scene {
         }
 
         Text {
-           anchors.horizontalCenter: parent.horizontalCenter
-           x: 50
-           y: 10
-           z: 50
-           font.pixelSize: 30
-           color: "#DDDDDD"
-           text: "Level 3"
+            anchors.verticalCenter: level3img.verticalCenter
+            anchors.left: level3img.right
+            anchors.leftMargin: 50
+            z: 50
+            font.pixelSize: 30
+            color: "#DDDDDD"
+            text: "Level 3"
          }
 
 
@@ -258,18 +276,18 @@ Scene {
 
     // LEVEL 4
     Item {
-        x: 383
-        y: 187
-        height: 60
-        width: 200
+        anchors.horizontalCenter: parent.horizontalCenter
+        y: parent.height * 2.25 / 7
+        height: 75
+        width: 75
 
 
         Image {
             x: 0
             y: 0
             z: 50
-            width: 50
-            height: 50
+            width: 75
+            height: 75
             source: (activeLevel == 4) ? "../../assets/UI/LVL/s2lvl.png" : "../../assets/UI/LVL/s2lvl.png"
             id: level4img
         }
@@ -291,13 +309,13 @@ Scene {
         }
 
         Text {
-           anchors.horizontalCenter: parent.horizontalCenter
-           x: 50
-           y: 10
-           z: 50
-           font.pixelSize: 30
-           color: "#DDDDDD"
-           text: "Level 4"
+            anchors.verticalCenter: level4img.verticalCenter
+            anchors.left: level4img.right
+            anchors.leftMargin: 50
+            z: 50
+            font.pixelSize: 30
+            color: "#DDDDDD"
+            text: "Level 4"
          }
 
 
@@ -313,17 +331,18 @@ Scene {
 
     // LEVEL 5
     Item {
-        x: 312
-        y: 80
-        height: 60
-        width: 200
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.horizontalCenterOffset: -150
+        y: parent.height * 1.5 / 7
+        height: 100
+        width: 100
 
         Image {
             x: 0
             y: 0
             z: 50
-            width: 50
-            height: 50
+            width: 100
+            height: 100
             source: (activeLevel == 5) ? "../../assets/UI/level_bosssel.png" : "../../assets/UI/level_bosssel.png"
             id: level5img
         }
@@ -345,13 +364,13 @@ Scene {
         }
 
         Text {
-           anchors.horizontalCenter: parent.horizontalCenter
-           x: 50
-           y: 10
-           z: 50
-           font.pixelSize: 30
-           color: "#DDDDDD"
-           text: "Level 5"
+            anchors.verticalCenter: level5img.verticalCenter
+            anchors.left: level5img.right
+            anchors.leftMargin: 50
+            z: 50
+            font.pixelSize: 30
+            color: "#DDDDDD"
+            text: "Boss Level"
          }
 
 

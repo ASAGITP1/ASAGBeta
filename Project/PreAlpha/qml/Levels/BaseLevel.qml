@@ -27,6 +27,9 @@ Item {
     property int kills: 0
 
 
+    Component.onCompleted: {
+        playerP.startAnim();
+    }
 
     BackgroundMusic {
         id: backgroundMusic

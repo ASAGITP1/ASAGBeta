@@ -13,6 +13,7 @@ Scene {
 
     property Player player
 
+
     width: 1080
     height: 1920
 
@@ -144,21 +145,36 @@ Scene {
 
 
 
-    Rectangle {
-        height: 50
-        width: 50
-        color: "blue"
+    // Backbutton
+    Image {
+        source: "../../assets/UI/new/backbutton.png"
 
-        x: gamescene.width - 50
+        anchors.left: parent.left
         y: 50
+        x: 50
         z: 99
+        height: 80
+        width: 150
+
+        Text {
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.left: parent.right
+            font.pixelSize: 50
+            color: "#FFFFFF"
+            text: "Back"
+            id: backbtntext
+        }
 
         MouseArea {
-               anchors.fill: parent
-               onClicked: {
-                   endLevel();
-               }
-           }
+            anchors.top: parent.top
+            anchors.left: parent.left
+            anchors.right: backbtntext.right
+            anchors.bottom: parent.bottom
+
+            onClicked: {
+               endLevel();
+            }
+        }
     }
 
 
@@ -169,7 +185,15 @@ Scene {
         loader.activeLevel.active = false;
         var toRemoveEntityTypes = ["enemy", "shot"];
         entityManager.removeEntitiesByFilter(toRemoveEntityTypes);
-        scenemaster.switchScene(1);
+
+        var sector = 1;
+
+        if(activeSector == "Sector1") sector = 1;
+        else if(activeSector == "Sector2") sector = 2;
+        else if(activeSector == "Sector3") sector = 3;
+        else if(activeSector == "Sector4") sector = 4;
+
+        scenemaster.switchScene(2 + sector);
     }
 
 }

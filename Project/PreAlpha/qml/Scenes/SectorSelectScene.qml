@@ -44,10 +44,9 @@ Scene {
 
 
     Image {
-        x: 100
-        y: 100
+        anchors.centerIn: parent
         z: 50
-        scale: 1.3
+        scale: 2.5
         source: "../../assets/UI/sector1.png"
         id: sectorbg
     }
@@ -108,18 +107,18 @@ Scene {
 
     // LEVEL 1
     Item {
-        x: 155
-        y: 530
-        height: 60
-        width: 200
+        x: 550
+        y: 560
+        width: 100
+        height: 100
 
 
         Image {
             x: 0
             y: 0
             z: 50
-            width: 50
-            height: 50
+            width: 100
+            height: 100
             source: (selectedSector == 1) ? "../../assets/UI/SectorSelector/Sector1.png" : "../../assets/UI/SectorSelector/Sector1.png"
             id: level1img
         }
@@ -142,9 +141,9 @@ Scene {
         }
 
         Text {
-           anchors.horizontalCenter: parent.horizontalCenter
-           x: 50
-           y: 10
+           anchors.verticalCenter: level1img.verticalCenter
+           anchors.left: level1img.right
+           anchors.leftMargin: 50
            z: 50
            font.pixelSize: 30
            color: "#DDDDDD"
@@ -162,18 +161,18 @@ Scene {
 
     // LEVEL 2
     Item {
-        x: 155
-        y: 730
-        height: 60
-        width: 200
+        x: 720
+        y: 810
+        width: 100
+        height: 100
 
 
         Image {
             x: 0
             y: 0
             z: 50
-            width: 50
-            height: 50
+            width: 100
+            height: 100
             source: (selectedSector == 1) ? "../../assets/UI/SectorSelector/Sector2.png" : "../../assets/UI/SectorSelector/Sector2.png"
             id: level2img
         }
@@ -197,10 +196,10 @@ Scene {
 
 
         Text {
-           anchors.horizontalCenter: parent.horizontalCenter
-           x: 50
-           y: 10
-           z: 50
+            anchors.verticalCenter: level2img.verticalCenter
+            anchors.left: level2img.right
+            anchors.leftMargin: 50
+            z: 50
            font.pixelSize: 30
            color: "#DDDDDD"
            text: "Sector 2"
@@ -218,18 +217,18 @@ Scene {
 
     // LEVEL 3
     Item {
-        x: 155
-        y: 930
-        height: 60
-        width: 200
+        x: 600
+        y: 1100
+        height: 100
+        width: 100
 
 
         Image {
             x: 0
             y: 0
             z: 50
-            width: 50
-            height: 50
+            width: 100
+            height: 100
             source: (selectedSector == 1) ? "../../assets/UI/SectorSelector/Sector3.png" : "../../assets/UI/SectorSelector/Sector3.png"
             id: level3img
         }
@@ -252,14 +251,14 @@ Scene {
         }
 
 
-        Text {
-           anchors.horizontalCenter: parent.horizontalCenter
-           x: 50
-           y: 10
-           z: 50
-           font.pixelSize: 30
-           color: "#DDDDDD"
-           text: "Sector 3"
+        Text {            
+            anchors.verticalCenter: level3img.verticalCenter
+            anchors.left: level3img.right
+            anchors.leftMargin: 50
+            z: 50
+            font.pixelSize: 30
+            color: "#DDDDDD"
+            text: "Sector 3"
          }
 
 
@@ -274,18 +273,18 @@ Scene {
 
     // LEVEL 4
     Item {
-        x: 155
-        y: 1130
-        height: 60
-        width: 200
+        x: 320
+        y: 1200
+        height: 100
+        width: 100
 
 
         Image {
             x: 0
             y: 0
             z: 50
-            width: 50
-            height: 50
+            width: 100
+            height: 100
             source: (selectedSector == 1) ? "../../assets/UI/SectorSelector/Sector4.png" : "../../assets/UI/SectorSelector/Sector4.png"
             id: level4img
         }
@@ -309,13 +308,13 @@ Scene {
 
 
         Text {
-           anchors.horizontalCenter: parent.horizontalCenter
-           x: 50
-           y: 10
-           z: 50
-           font.pixelSize: 30
-           color: "#DDDDDD"
-           text: "Sector 4"
+            anchors.verticalCenter: level4img.verticalCenter
+            anchors.left: level4img.right
+            anchors.leftMargin: 50
+            z: 50
+            font.pixelSize: 30
+            color: "#DDDDDD"
+            text: "Sector 4"
          }
 
 
@@ -326,10 +325,6 @@ Scene {
                  }
            }
     }
-
-
-
-
 
     Image {
         anchors.horizontalCenter: parent.horizontalCenter
